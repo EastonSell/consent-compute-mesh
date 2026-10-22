@@ -10,3 +10,10 @@ examples/illustrative.json
 results/illustrative_simulation.json
 results/local_cpu_benchmark.json
 LICENSE
+mesh/process_mesh.py
+mesh/process_cli.py
+tests/test_process_mesh.py
+PROCESS_EXPERIMENT.md
+results/local_process_no_delay.json
+results/local_process_emulated_link.json
+results/local_process_disconnect.json

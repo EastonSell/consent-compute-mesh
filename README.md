@@ -9,8 +9,9 @@ This is a newly implemented, offline research baseline, not a recovered previous
 - A serial, single-request placement/latency model with explicit consent, memory and directed-link checks.
 - A real, local CPU microbenchmark using a deterministic pure-Python matrix-vector kernel.
 - Reproducible illustrative scenarios and automated tests.
+- A real two-process, private-pipe synthetic neural forward experiment with explicitly emulated link delays and failure handling. See [Process experiments](PROCESS_EXPERIMENT.md).
 
-It does **not** discover devices, listen on a port, connect to hardware, install packages, load an AI model, or execute remote jobs. Python 3.10+ and its standard library are sufficient.
+The optional process experiment starts only fixed-kernel local workers after explicit opt-in. It does **not** discover devices, listen on a port, connect to hardware, install packages, load an AI model, or execute remote jobs. Python 3.10+ and its standard library are sufficient.
 
 ## Run
 
