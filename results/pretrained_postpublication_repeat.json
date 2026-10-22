@@ -1,0 +1,499 @@
+{
+  "kind": "pretrained_local_partition_measurement",
+  "status": "ok",
+  "model_id": "HuggingFaceTB/SmolLM2-135M-Instruct",
+  "revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+  "verified_sha256": {
+    "config.json": "8eb740e8bbe4cff95ea7b4588d17a2432deb16e8075bc5828ff7ba9be94d982a",
+    "model.safetensors": "5af571cbf074e6d21a03528d2330792e532ca608f24ac70a143f6b369968ab8c"
+  },
+  "torch": "2.5.1+cpu",
+  "transformers": "4.46.3",
+  "dtype": "float32",
+  "attention": "eager",
+  "threads_per_process": 1,
+  "kv_cache": false,
+  "padding": false,
+  "batch_size": 1,
+  "split_after_layer": 14,
+  "observed_available_host_memory_bytes_before_load": 8939393024,
+  "reference_load_seconds": 0.7477118259994313,
+  "correctness_gate": [
+    {
+      "tokens": 5,
+      "max_abs_error": 0.0,
+      "next_token_id": 7042,
+      "rtol": 0.0001,
+      "atol": 0.0001
+    },
+    {
+      "tokens": 18,
+      "max_abs_error": 0.0,
+      "next_token_id": 260,
+      "rtol": 0.0001,
+      "atol": 0.0001
+    }
+  ],
+  "cases": [
+    {
+      "text": "The capital of France is",
+      "token_ids": [
+        504,
+        3575,
+        282,
+        4649,
+        314
+      ],
+      "link_assumptions": {
+        "latency_ms": 0,
+        "bytes_per_second": null
+      },
+      "warmup_pairs_excluded": 1,
+      "samples": [
+        {
+          "worker_compute_seconds": [
+            0.03216944300038449,
+            0.04078823599957104
+          ],
+          "worker_peak_rss_kib": [
+            1091120,
+            1091120
+          ],
+          "emulated_wait_requested_seconds": 0.0,
+          "emulated_wait_observed_seconds": 0.0,
+          "activation_frame_bytes": 11557,
+          "status": "ok",
+          "split_seconds": 0.07684543199957261,
+          "max_abs_error": 0.0,
+          "next_token_id": 7042,
+          "rtol": 0.0001,
+          "atol": 0.0001,
+          "reference_seconds": 0.07515802699981577,
+          "order": "reference_first"
+        },
+        {
+          "worker_compute_seconds": [
+            0.03133672199965076,
+            0.04085248200044589
+          ],
+          "worker_peak_rss_kib": [
+            1091120,
+            1091120
+          ],
+          "emulated_wait_requested_seconds": 0.0,
+          "emulated_wait_observed_seconds": 0.0,
+          "activation_frame_bytes": 11557,
+          "status": "ok",
+          "split_seconds": 0.07631569799923454,
+          "max_abs_error": 0.0,
+          "next_token_id": 7042,
+          "rtol": 0.0001,
+          "atol": 0.0001,
+          "reference_seconds": 0.07765046900021844,
+          "order": "split_first"
+        },
+        {
+          "worker_compute_seconds": [
+            0.031126865000260295,
+            0.04614430099991296
+          ],
+          "worker_peak_rss_kib": [
+            1091120,
+            1091120
+          ],
+          "emulated_wait_requested_seconds": 0.0,
+          "emulated_wait_observed_seconds": 0.0,
+          "activation_frame_bytes": 11557,
+          "status": "ok",
+          "split_seconds": 0.08150409200061404,
+          "max_abs_error": 0.0,
+          "next_token_id": 7042,
+          "rtol": 0.0001,
+          "atol": 0.0001,
+          "reference_seconds": 0.07694174700009171,
+          "order": "reference_first"
+        }
+      ],
+      "reference_seconds": {
+        "count": 3,
+        "minimum": 0.07515802699981577,
+        "median": 0.07694174700009171,
+        "mean": 0.0765834143333753,
+        "maximum": 0.07765046900021844
+      },
+      "split_seconds": {
+        "count": 3,
+        "minimum": 0.07631569799923454,
+        "median": 0.07684543199957261,
+        "mean": 0.07822174066647374,
+        "maximum": 0.08150409200061404
+      },
+      "emulated_wait_observed_seconds": {
+        "count": 3,
+        "minimum": 0.0,
+        "median": 0.0,
+        "mean": 0.0,
+        "maximum": 0.0
+      }
+    },
+    {
+      "text": "The capital of France is",
+      "token_ids": [
+        504,
+        3575,
+        282,
+        4649,
+        314
+      ],
+      "link_assumptions": {
+        "latency_ms": 10,
+        "bytes_per_second": 1000000
+      },
+      "warmup_pairs_excluded": 1,
+      "samples": [
+        {
+          "worker_compute_seconds": [
+            0.03540295499988133,
+            0.04384979899987229
+          ],
+          "worker_peak_rss_kib": [
+            1091120,
+            1091120
+          ],
+          "emulated_wait_requested_seconds": 0.021557,
+          "emulated_wait_observed_seconds": 0.021643273000336194,
+          "activation_frame_bytes": 11557,
+          "status": "ok",
+          "split_seconds": 0.10501487999954406,
+          "max_abs_error": 0.0,
+          "next_token_id": 7042,
+          "rtol": 0.0001,
+          "atol": 0.0001,
+          "reference_seconds": 0.0743512560002273,
+          "order": "reference_first"
+        },
+        {
+          "worker_compute_seconds": [
+            0.033973982999668806,
+            0.04328169800010073
+          ],
+          "worker_peak_rss_kib": [
+            1091120,
+            1091120
+          ],
+          "emulated_wait_requested_seconds": 0.021557,
+          "emulated_wait_observed_seconds": 0.02164561599965964,
+          "activation_frame_bytes": 11557,
+          "status": "ok",
+          "split_seconds": 0.10314956700040057,
+          "max_abs_error": 0.0,
+          "next_token_id": 7042,
+          "rtol": 0.0001,
+          "atol": 0.0001,
+          "reference_seconds": 0.07434257299973979,
+          "order": "split_first"
+        },
+        {
+          "worker_compute_seconds": [
+            0.033181513999807066,
+            0.04451099800007796
+          ],
+          "worker_peak_rss_kib": [
+            1091120,
+            1091120
+          ],
+          "emulated_wait_requested_seconds": 0.021557,
+          "emulated_wait_observed_seconds": 0.02165749499999947,
+          "activation_frame_bytes": 11557,
+          "status": "ok",
+          "split_seconds": 0.10364785099955043,
+          "max_abs_error": 0.0,
+          "next_token_id": 7042,
+          "rtol": 0.0001,
+          "atol": 0.0001,
+          "reference_seconds": 0.07401158300035604,
+          "order": "reference_first"
+        }
+      ],
+      "reference_seconds": {
+        "count": 3,
+        "minimum": 0.07401158300035604,
+        "median": 0.07434257299973979,
+        "mean": 0.07423513733344105,
+        "maximum": 0.0743512560002273
+      },
+      "split_seconds": {
+        "count": 3,
+        "minimum": 0.10314956700040057,
+        "median": 0.10364785099955043,
+        "mean": 0.10393743266649835,
+        "maximum": 0.10501487999954406
+      },
+      "emulated_wait_observed_seconds": {
+        "count": 3,
+        "minimum": 0.021643273000336194,
+        "median": 0.02164561599965964,
+        "mean": 0.0216487946666651,
+        "maximum": 0.02165749499999947
+      }
+    },
+    {
+      "text": "A small computer sends an intermediate tensor to another computer. The main cost of this operation is",
+      "token_ids": [
+        49,
+        1165,
+        2583,
+        14137,
+        354,
+        14019,
+        13104,
+        288,
+        1372,
+        2583,
+        30,
+        378,
+        1085,
+        1708,
+        282,
+        451,
+        4953,
+        314
+      ],
+      "link_assumptions": {
+        "latency_ms": 0,
+        "bytes_per_second": null
+      },
+      "warmup_pairs_excluded": 1,
+      "samples": [
+        {
+          "worker_compute_seconds": [
+            0.04832531099964399,
+            0.0590493299996524
+          ],
+          "worker_peak_rss_kib": [
+            1091120,
+            1091120
+          ],
+          "emulated_wait_requested_seconds": 0.0,
+          "emulated_wait_observed_seconds": 0.0,
+          "activation_frame_bytes": 41510,
+          "status": "ok",
+          "split_seconds": 0.11183911699936289,
+          "max_abs_error": 0.0,
+          "next_token_id": 260,
+          "rtol": 0.0001,
+          "atol": 0.0001,
+          "reference_seconds": 0.10106835799979308,
+          "order": "reference_first"
+        },
+        {
+          "worker_compute_seconds": [
+            0.04707950600004551,
+            0.05469517999972595
+          ],
+          "worker_peak_rss_kib": [
+            1091120,
+            1091120
+          ],
+          "emulated_wait_requested_seconds": 0.0,
+          "emulated_wait_observed_seconds": 0.0,
+          "activation_frame_bytes": 41510,
+          "status": "ok",
+          "split_seconds": 0.10607490399979724,
+          "max_abs_error": 0.0,
+          "next_token_id": 260,
+          "rtol": 0.0001,
+          "atol": 0.0001,
+          "reference_seconds": 0.10212410599979194,
+          "order": "split_first"
+        },
+        {
+          "worker_compute_seconds": [
+            0.054020289000618504,
+            0.059923302000242984
+          ],
+          "worker_peak_rss_kib": [
+            1091120,
+            1091120
+          ],
+          "emulated_wait_requested_seconds": 0.0,
+          "emulated_wait_observed_seconds": 0.0,
+          "activation_frame_bytes": 41510,
+          "status": "ok",
+          "split_seconds": 0.11833748099979857,
+          "max_abs_error": 0.0,
+          "next_token_id": 260,
+          "rtol": 0.0001,
+          "atol": 0.0001,
+          "reference_seconds": 0.10137057500014635,
+          "order": "reference_first"
+        }
+      ],
+      "reference_seconds": {
+        "count": 3,
+        "minimum": 0.10106835799979308,
+        "median": 0.10137057500014635,
+        "mean": 0.10152101299991045,
+        "maximum": 0.10212410599979194
+      },
+      "split_seconds": {
+        "count": 3,
+        "minimum": 0.10607490399979724,
+        "median": 0.11183911699936289,
+        "mean": 0.1120838339996529,
+        "maximum": 0.11833748099979857
+      },
+      "emulated_wait_observed_seconds": {
+        "count": 3,
+        "minimum": 0.0,
+        "median": 0.0,
+        "mean": 0.0,
+        "maximum": 0.0
+      }
+    },
+    {
+      "text": "A small computer sends an intermediate tensor to another computer. The main cost of this operation is",
+      "token_ids": [
+        49,
+        1165,
+        2583,
+        14137,
+        354,
+        14019,
+        13104,
+        288,
+        1372,
+        2583,
+        30,
+        378,
+        1085,
+        1708,
+        282,
+        451,
+        4953,
+        314
+      ],
+      "link_assumptions": {
+        "latency_ms": 10,
+        "bytes_per_second": 1000000
+      },
+      "warmup_pairs_excluded": 1,
+      "samples": [
+        {
+          "worker_compute_seconds": [
+            0.04958722100036539,
+            0.06663906599987968
+          ],
+          "worker_peak_rss_kib": [
+            1091120,
+            1091120
+          ],
+          "emulated_wait_requested_seconds": 0.05151,
+          "emulated_wait_observed_seconds": 0.05159696200007602,
+          "activation_frame_bytes": 41510,
+          "status": "ok",
+          "split_seconds": 0.1727730189995782,
+          "max_abs_error": 0.0,
+          "next_token_id": 260,
+          "rtol": 0.0001,
+          "atol": 0.0001,
+          "reference_seconds": 0.1071730359999492,
+          "order": "reference_first"
+        },
+        {
+          "worker_compute_seconds": [
+            0.051002913000047556,
+            0.0599839440001233
+          ],
+          "worker_peak_rss_kib": [
+            1091120,
+            1091120
+          ],
+          "emulated_wait_requested_seconds": 0.05151,
+          "emulated_wait_observed_seconds": 0.0516156610001417,
+          "activation_frame_bytes": 41510,
+          "status": "ok",
+          "split_seconds": 0.16710238799987565,
+          "max_abs_error": 0.0,
+          "next_token_id": 260,
+          "rtol": 0.0001,
+          "atol": 0.0001,
+          "reference_seconds": 0.10944064700015588,
+          "order": "split_first"
+        },
+        {
+          "worker_compute_seconds": [
+            0.0495983469991188,
+            0.06005844599985721
+          ],
+          "worker_peak_rss_kib": [
+            1091120,
+            1091120
+          ],
+          "emulated_wait_requested_seconds": 0.05151,
+          "emulated_wait_observed_seconds": 0.05159322700001212,
+          "activation_frame_bytes": 41510,
+          "status": "ok",
+          "split_seconds": 0.1662942650000332,
+          "max_abs_error": 0.0,
+          "next_token_id": 260,
+          "rtol": 0.0001,
+          "atol": 0.0001,
+          "reference_seconds": 0.1054850919999808,
+          "order": "reference_first"
+        }
+      ],
+      "reference_seconds": {
+        "count": 3,
+        "minimum": 0.1054850919999808,
+        "median": 0.1071730359999492,
+        "mean": 0.10736625833336196,
+        "maximum": 0.10944064700015588
+      },
+      "split_seconds": {
+        "count": 3,
+        "minimum": 0.1662942650000332,
+        "median": 0.16710238799987565,
+        "mean": 0.168723223999829,
+        "maximum": 0.1727730189995782
+      },
+      "emulated_wait_observed_seconds": {
+        "count": 3,
+        "minimum": 0.05159322700001212,
+        "median": 0.05159696200007602,
+        "mean": 0.05160195000007661,
+        "maximum": 0.0516156610001417
+      }
+    }
+  ],
+  "scope": "Real pinned pretrained weights on one host over private pipes. Emulated waits are not physical-network, VM, or heterogeneous-device measurements. No quality benchmark or generation throughput claim.",
+  "partition_startup_seconds": 3.4032052150005256,
+  "worker_load_reports": [
+    {
+      "ready": true,
+      "stage": 0,
+      "load_seconds": 0.773945986000399,
+      "peak_rss_kib": 1091120
+    },
+    {
+      "ready": true,
+      "stage": 1,
+      "load_seconds": 0.7470103249997919,
+      "peak_rss_kib": 1091120
+    }
+  ],
+  "phase": "complete",
+  "cleanup": {
+    "workers_cleaned_up": true,
+    "worker_exitcodes": [
+      0,
+      0
+    ],
+    "worker_forced_termination": [
+      false,
+      false
+    ],
+    "cleanup_seconds": 0.5268709129995841
+  },
+  "controller_peak_rss_kib": 1091120
+}

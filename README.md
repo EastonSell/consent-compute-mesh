@@ -11,7 +11,7 @@ This is a newly implemented, offline research baseline, not a recovered previous
 - Reproducible illustrative scenarios and automated tests.
 - A real two-process, private-pipe synthetic neural forward experiment with explicitly emulated link delays and failure handling. See [Process experiments](PROCESS_EXPERIMENT.md).
 - Persistent workers with warmup-excluded, repeated paired timing and correctness checks. See [Repeated experiments](REPEATED_EXPERIMENT.md).
-- An optional pinned real pretrained-model partition with local-only weights, binary pipe transport and logit equivalence checks. See [Pretrained experiment](PRETRAINED_EXPERIMENT.md).
+- An optional pinned real pretrained-model partition with local-only weights, binary pipe transport and logit equivalence checks. See [Pretrained experiment](PRETRAINED_EXPERIMENT.md) and [recorded results](PRETRAINED_RESULTS.md).
 
 The optional process experiment starts only fixed-kernel local workers after explicit opt-in. It does **not** discover devices, listen on a port, connect to hardware, install packages, execute remote jobs. The original synthetic commands need Python 3.10+ and its standard library; only the optional pretrained experiment loads an AI model and requires the separately documented dependencies and local weights.
 
@@ -76,4 +76,4 @@ Before adding any real worker protocol, require explicit owner enrollment, authe
 
 The model omits batching, pipeline overlap, concurrent requests, KV caches, serialization, weight loading, packet contention, reliability, tensor parallelism and energy. Supply those memory costs conservatively through workspace where applicable, or extend and validate the model before drawing conclusions. Effective operations/sec is workload-specific, not a portable device constant.
 
-Next useful work is to measure a small real inference workload on one explicitly opted-in host, then validate a two-device latency prediction against actual transfers under a separately reviewed consent/authentication design. Hardware and distributed validation have not been performed.
+The optional pretrained extension now validates a small real model split across local processes. Next useful work is broader input validation and, under a separately reviewed consent/authentication design, comparison against actual cross-host transfers. Physical-device and cross-host validation have not been performed.

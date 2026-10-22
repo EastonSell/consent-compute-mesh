@@ -1,0 +1,22 @@
+{
+  "kind": "experiment_execution_record",
+  "independently_preregistered": false,
+  "model_revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+  "runs": [
+    {
+      "label": "exploratory_prepublication",
+      "file": "results/pretrained_exploratory_prepublication.json",
+      "source_commit": null,
+      "notes": "Completed before source publication and before independent review finished. Original raw output preserved. Subsequent review added response validation and failure-evidence retention; not an unchanged-protocol replicate.",
+      "sha256": "32d705664c23abbc0ecb59461d2ed87676dfc1269cb0911fdd25fa05174f5c9e"
+    },
+    {
+      "label": "postpublication_amended_protocol_repeat",
+      "file": "results/pretrained_postpublication_repeat.json",
+      "source_commit": "e1fa478d91d878c8480ed24956106e0d8bbc8254",
+      "notes": "Executed after amended source publication and independent review. Same weights, inputs, tolerances, repeats and warmup as preliminary run. Additional protocol-validation overhead is included.",
+      "sha256": "dc468b79db770b2387c85d97e1fd05c3747d260aef0d12b5d5418d02cbce6b9e"
+    }
+  ],
+  "interpretation": "Two same-host executions, not independent hardware trials or a powered confirmatory study. Shared-host contention may differ between runs."
+}

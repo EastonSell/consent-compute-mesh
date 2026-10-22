@@ -88,3 +88,8 @@ setup remain ordinary setup errors. The optional integration test deliberately
 injects a failed response to verify retention; it is a failure-path test, not a
 performance sample. No tolerances, model weights, cases or repeat counts were
 changed in response to preliminary numerical results.
+
+
+## Recorded outputs
+
+Both the separately labeled preliminary execution and the post-publication amended-protocol repeat are preserved. See [Recorded results](PRETRAINED_RESULTS.md) for measured values, chronology, limits and artifact hashes.
