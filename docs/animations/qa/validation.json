@@ -1,0 +1,26 @@
+{
+  "scene": "capacity-latency",
+  "repo": "consent-compute-mesh",
+  "actual_renderer": "Manim Community0.22.0/Cairo",
+  "duration_seconds": 24,
+  "video_frames": 360,
+  "video_fps": 15,
+  "resolution": [
+    1280,
+    720
+  ],
+  "codec": "h264/yuv420p",
+  "no_audio": true,
+  "gif_frames": 144,
+  "gif_duration_seconds": 24.0,
+  "fully_decoded": true,
+  "decoded_frames_identical_to_raw_manim": true,
+  "tests": {
+    "mathematical": 7,
+    "actual_manim_geometry_timing": 5,
+    "status": "PASS"
+  },
+  "static_default_and_reduced_motion_structural_check": "PASS",
+  "browser_playback_check": "not exercised",
+  "mp4_sha256": "1d1f3c26a7895a4fbc204c6a76d15a3499f1bca72e0c3c925e42405364355026"
+}

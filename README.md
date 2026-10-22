@@ -13,11 +13,11 @@ This project studies memory, compute and communication limits through explicit c
 
 ## Watch the concept in 24 seconds
 
-[![A hypothetical 70B model has 32.596 GiB ideal 4-bit weights and a 43.616 GiB illustrative runtime envelope. Assumed 12-GiB allocatable pools yield aggregate floors of three and four. Serial link delays grow with boundaries, not memory capacity.](docs/animations/poster.png)](docs/animations/concept.mp4)
+[![An analytical one-token serial graph shows increasing communication time as stage count grows. Under declared link assumptions, 16 stages give an optimistic communication-only ceiling of 2.511 tokens per second, not an achieved rate.](docs/animations/poster.png)](docs/animations/concept.mp4)
 
-[MP4](docs/animations/concept.mp4) · [Optional GIF preview](docs/animations/concept.gif) · [Text transcript](docs/animations/transcript.txt) · [Captions](docs/animations/captions.vtt)
+[24-second Manim MP4](docs/animations/concept.mp4) · [Optional GIF preview](docs/animations/concept.gif) · [Text transcript](docs/animations/transcript.txt) · [Captions](docs/animations/captions.vtt)
 
-Calculated assumptions · not device or model measurements. No audio. The poster and transcript provide a no-motion alternative. The downloaded [HTML viewer](docs/animations/index.html) is static by default and never autoplays.
+Rendered with Manim Community 0.22.0. Calculated assumptions · not device or model measurements. No audio. The poster and transcript provide a no-motion alternative. The downloaded [HTML viewer](docs/animations/index.html) is static by default and never autoplays.
 
 ## What is established
 

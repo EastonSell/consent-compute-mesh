@@ -1,17 +1,13 @@
 WEBVTT
 
 1
-00:00:00.000 --> 00:00:06.000
-Ideal weight packing is only one part of a runtime memory budget.
+00:00:00.000 --> 00:00:08.000
+Ideal weights are one term in an illustrative runtime envelope.
 
 2
-00:00:06.000 --> 00:00:12.000
-At an assumed 12 GiB allocatable per pool: three for weights, four for the envelope.
+00:00:08.000 --> 00:00:16.000
+Aggregate capacity is a lower bound, not a placement proof.
 
 3
-00:00:12.000 --> 00:00:18.000
-Each boundary adds latency plus serialization time before the next stage can proceed.
-
-4
-00:00:18.000 --> 00:00:24.000
-More serial crossings raise a communication-only floor, not an achieved token rate.
+00:00:16.000 --> 00:00:24.000
+The declared one-token serial graph adds dependent crossings. This is not all orchestration.

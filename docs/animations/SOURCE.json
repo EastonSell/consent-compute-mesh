@@ -1,6 +1,16 @@
 {
-  "scene": "capacity-latency",
-  "repository": "consent-compute-mesh",
-  "path": "docs/examples/capacity_latency.py",
-  "sha256": "fe7eac53991436fa35e5e26f747da7529aebf414d25e29397322530ea145d7ce"
+  "renderer": "Actual Manim Community 0.22.0, Cairo",
+  "scene": "CapacityLatency",
+  "neutral_asset_slug": "capacity-latency",
+  "source_demo": "docs/examples/capacity_latency.py",
+  "asset_provenance": "Original programmatic geometry and typography; no generated scientific data or external media.",
+  "evidence_scope": "CALCULATED ASSUMPTIONS \u00b7 NOT DEVICE OR MODEL MEASUREMENTS",
+  "duration_seconds": 24,
+  "frames_per_second": 15,
+  "no_audio": true,
+  "motion_free_path": [
+    "poster.png",
+    "transcript.txt",
+    "index.html (static by default)"
+  ]
 }
