@@ -1,0 +1,5 @@
+# Optional only. Use a CPU build of PyTorch for the documented experiment.
+torch==2.5.1
+transformers==4.46.3
+safetensors==0.4.5
+numpy==2.3.5

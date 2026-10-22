@@ -22,3 +22,12 @@ mesh/repeated.py
 tests/test_repeated.py
 REPEATED_EXPERIMENT.md
 results/repeated_process_suite.json
+mesh/pretrained_protocol.py
+mesh/pretrained_model.py
+mesh/pretrained_session.py
+mesh/pretrained_experiment.py
+tests/test_pretrained_protocol.py
+tests/test_pretrained_optional.py
+requirements-pretrained.txt
+PRETRAINED_EXPERIMENT.md
+tests/test_pretrained_session_protocol.py

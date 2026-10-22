@@ -46,6 +46,7 @@ class WorkerSession:
         self.cleanup = None
         self.failed = False
         self.startup_seconds = 0.0
+        self.shutdown_grace_seconds = .2
 
     def __enter__(self):
         if self.processes or self.cleanup is not None:
@@ -126,7 +127,7 @@ class WorkerSession:
             connection.close()
         forced = []
         for process in self.processes:
-            process.join(.2)
+            process.join(self.shutdown_grace_seconds)
             force = process.is_alive()
             forced.append(force)
             if force:

@@ -11,7 +11,7 @@ python -m unittest discover -s tests -v
 
 Only two worker processes are launched for the entire suite. Each serves every width/link case sequentially over private pipes. We measure the same fixed synthetic dense/ReLU workload as the previous milestone, not a pretrained model.
 
-For each case, both execution modes run during two excluded warmup pairs, followed by seven retained pairs. Retained pairs alternate reference-first and split-first order to reduce systematic ordering bias. Both modes use identical deterministic inputs and layers; every retained pair must match exactly. A mismatch or failed request stops the suite and records the failure. Timed-out sessions cannot be reused, preventing a late response from contaminating the next request.
+For each case, both execution modes run during two excluded warmup pairs, followed by seven retained pairs. Retained pairs alternate reference-first and split-first order to reduce systematic ordering bias. Seven repeats yield four reference-first and three split-first pairs, not exact counterbalancing. Both modes use identical deterministic inputs and layers; every retained pair must match exactly. A mismatch or failed request stops the suite and records the failure. Timed-out sessions cannot be reused, preventing a late response from contaminating the next request.
 
 Startup/cleanup are reported separately. `split_seconds` includes real serialization, IPC, scheduling, worker execution and any deliberately emulated wait. `reference_seconds` measures the same forward computation in the controller without serialization/IPC. Worker compute times, payload bytes, requested delay and observed wait are retained for each pair. Warmup samples are excluded from summaries and not stored.
 
