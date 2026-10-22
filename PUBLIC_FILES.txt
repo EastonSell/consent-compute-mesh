@@ -1,0 +1,12 @@
+.gitignore
+README.md
+PUBLIC_FILES.txt
+mesh/__init__.py
+mesh/__main__.py
+mesh/model.py
+mesh/benchmark.py
+tests/test_mesh.py
+examples/illustrative.json
+results/illustrative_simulation.json
+results/local_cpu_benchmark.json
+LICENSE

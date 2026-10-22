@@ -1,0 +1,23 @@
+{
+  "kind": "local_cpu_measurement",
+  "kernel": "pure_python_dense_matvec",
+  "python": "3.12.14",
+  "implementation": "CPython",
+  "machine": "x86_64",
+  "size": 64,
+  "iterations": 20,
+  "repeats": 5,
+  "samples_seconds": [
+    0.0041026889998647675,
+    0.004156940000029863,
+    0.00413764099994296,
+    0.0046558049998566275,
+    0.005999789999805216
+  ],
+  "median_seconds": 0.004156940000029863,
+  "operations_per_sample": 163840,
+  "operation_count_convention": "2 scalar operations per multiply-accumulate; excludes Python overhead",
+  "median_ops_per_second": 39413607.12418822,
+  "checksum": 0.04631696428571428,
+  "scope": "This process only; not measured model inference, GPU throughput, ESP32, or network throughput."
+}
