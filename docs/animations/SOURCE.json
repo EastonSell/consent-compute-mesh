@@ -1,0 +1,6 @@
+{
+  "scene": "capacity-latency",
+  "repository": "consent-compute-mesh",
+  "path": "docs/examples/capacity_latency.py",
+  "sha256": "fe7eac53991436fa35e5e26f747da7529aebf414d25e29397322530ea145d7ce"
+}

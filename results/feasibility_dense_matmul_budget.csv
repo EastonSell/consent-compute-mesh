@@ -1,0 +1,13 @@
+parameters_billion,assumed_active_dense_matmul_gflop_per_token,target_tokens_per_second,assumed_active_dense_matmul_tflop_per_second
+1,2,1,0.002
+1,2,5,0.01
+1,2,10,0.02
+8,16,1,0.016
+8,16,5,0.08
+8,16,10,0.16
+70,140,1,0.14
+70,140,5,0.7
+70,140,10,1.4
+400,800,1,0.8
+400,800,5,4.0
+400,800,10,8.0

@@ -1,0 +1,181 @@
+{
+  "sources": [
+    {
+      "id": "R1",
+      "url": "https://arxiv.org/html/2312.08361v1",
+      "evidence_class": "published_measurement",
+      "published": "2023-12",
+      "inspected": "2026-10-22",
+      "retrieval": "Firecrawl primary page/abstract or targeted extraction",
+      "scope": "Petals: named GPU/network experiments; pipeline distribution and dual-cache recovery."
+    },
+    {
+      "id": "R2",
+      "url": "https://arxiv.org/html/2505.18164v1",
+      "evidence_class": "published_measurement",
+      "published": "2025-05",
+      "inspected": "2026-10-22",
+      "retrieval": "Firecrawl primary page/abstract or targeted extraction",
+      "scope": "MDI-LLM: three 8 GB Jetson TX2 boards, gigabit Ethernet, multiple independent sequences."
+    },
+    {
+      "id": "R3",
+      "url": "https://arxiv.org/html/2309.06180v1",
+      "evidence_class": "published_measurement",
+      "published": "2023-09-12",
+      "inspected": "2026-10-22",
+      "retrieval": "Firecrawl primary page/abstract or targeted extraction",
+      "scope": "PagedAttention: KV-cache memory management; not a household runtime validation."
+    },
+    {
+      "id": "R4",
+      "url": "https://arxiv.org/abs/2401.04088",
+      "evidence_class": "architecture_report",
+      "published": "2024-01-08",
+      "inspected": "2026-10-22",
+      "retrieval": "Firecrawl primary page/abstract or targeted extraction",
+      "scope": "Mixtral total/active parameters and expert selection."
+    },
+    {
+      "id": "R5",
+      "url": "https://support.apple.com/en-us/122209",
+      "evidence_class": "manufacturer_exemplar",
+      "published": null,
+      "inspected": "2026-10-22",
+      "retrieval": "Firecrawl primary page/abstract or targeted extraction",
+      "scope": "Named 2025 M4 Air installed unified memory 16/24/32 GB and advertised 120 GB/s."
+    },
+    {
+      "id": "R6",
+      "url": "https://support.google.com/pixelphone/answer/7158570?hl=en",
+      "evidence_class": "manufacturer_exemplar",
+      "published": null,
+      "inspected": "2026-10-22",
+      "retrieval": "Firecrawl primary page/abstract or targeted extraction",
+      "scope": "Named Pixel 9 RAM 12 GB and Tensor G4; no available RAM or measured FLOP/s."
+    },
+    {
+      "id": "R7",
+      "url": "https://developer.amazon.com/docs/device-specs/device-specifications-fire-tv-streaming-media-player.html",
+      "evidence_class": "manufacturer_exemplar",
+      "published": null,
+      "inspected": "2026-10-22",
+      "retrieval": "Firecrawl primary page/abstract or targeted extraction",
+      "scope": "Named 2nd Gen 4K Max 2023 RAM 2 GB LPDDR4, four Cortex-A55 up to 2 GHz."
+    },
+    {
+      "id": "R8",
+      "url": "https://news.xbox.com/en-us/2020/03/16/xbox-series-x-tech/",
+      "evidence_class": "manufacturer_exemplar",
+      "published": "2020-03-16",
+      "inspected": "2026-10-22",
+      "retrieval": "Firecrawl primary page/abstract or targeted extraction",
+      "scope": "Series X installed 16 GB GDDR6, 12 TFLOPS advertised; no credited arbitrary inference runtime."
+    },
+    {
+      "id": "R9",
+      "url": "https://www.espressif.com/en/products/socs/esp32-s3",
+      "evidence_class": "manufacturer_exemplar",
+      "published": null,
+      "inspected": "2026-10-22",
+      "retrieval": "Firecrawl primary page/abstract or targeted extraction",
+      "scope": "ESP32-S3 internal 512 KB SRAM, dual LX7 up to 240 MHz; external-memory configuration unknown."
+    },
+    {
+      "id": "R10",
+      "url": "https://www2.census.gov/library/publications/2024/demo/acs-56.pdf",
+      "evidence_class": "official_population_evidence",
+      "published": "2024-06",
+      "inspected": "2026-10-22",
+      "retrieval": "Firecrawl primary page/abstract or targeted extraction",
+      "scope": "2021 presence percentages 80.5/90.0/63.8 for desktop/laptop, smartphone, tablet; not free capacity."
+    },
+    {
+      "id": "R11",
+      "url": "https://github.com/ggml-org/llama.cpp/wiki/Tensor-Encoding-Schemes",
+      "evidence_class": "implementation_format",
+      "published": null,
+      "inspected": "2026-10-22",
+      "retrieval": "Firecrawl primary page/abstract or targeted extraction",
+      "scope": "Q4_K encoding 4.5 bits/weight, not actual complete-checkpoint size."
+    },
+    {
+      "id": "R12",
+      "url": "https://arxiv.org/html/2407.21783v3#S3.T3",
+      "evidence_class": "architecture_report",
+      "published": "2024-11-23",
+      "inspected": "2026-10-22",
+      "retrieval": "Firecrawl primary page/abstract or targeted extraction",
+      "scope": "8B/70B/405B layers 32/80/126; hidden 4096/8192/16384; KV heads 8."
+    },
+    {
+      "id": "R13",
+      "url": "https://arxiv.org/abs/2211.17192",
+      "evidence_class": "algorithm_report",
+      "published": "2022-11",
+      "inspected": "2026-10-22",
+      "retrieval": "Firecrawl primary page/abstract or targeted extraction",
+      "scope": "Speculative decoding changes accepted tokens per sequential target evaluation; not measured here."
+    }
+  ],
+  "uncredited_unknowns": [
+    "Per-device available application memory",
+    "Sustained per-device dense-model FLOP/s",
+    "Arbitrary appliance runtime eligibility",
+    "Population-average inference resources",
+    "Joint household availability"
+  ],
+  "analytical_assumptions": {
+    "household_gib": [
+      4,
+      12,
+      24
+    ],
+    "weight_bits": [
+      4,
+      8,
+      16
+    ],
+    "envelope_weight_multiplier": 1.2,
+    "envelope_aggregate_reserve_gib": 2,
+    "fp16_kv_context": 8192,
+    "fp16_kv_batch": 1,
+    "link_settings_mbps_one_way_ms": [
+      [
+        1000,
+        1
+      ],
+      [
+        20,
+        20
+      ],
+      [
+        5,
+        100
+      ]
+    ],
+    "stage_compute_ms": [
+      [
+        20,
+        20,
+        20,
+        20
+      ],
+      [
+        20,
+        20,
+        20,
+        100
+      ]
+    ],
+    "probabilities": [
+      0.9,
+      0.99
+    ],
+    "duty_cycle_examples": [
+      0.25,
+      0.5
+    ]
+  },
+  "baseline_public_commit": "e4880cf710863be982caf8c908a86801dd37e4fe"
+}

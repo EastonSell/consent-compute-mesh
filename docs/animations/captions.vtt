@@ -1,0 +1,17 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:06.000
+Ideal weight packing is only one part of a runtime memory budget.
+
+2
+00:00:06.000 --> 00:00:12.000
+At an assumed 12 GiB allocatable per pool: three for weights, four for the envelope.
+
+3
+00:00:12.000 --> 00:00:18.000
+Each boundary adds latency plus serialization time before the next stage can proceed.
+
+4
+00:00:18.000 --> 00:00:24.000
+More serial crossings raise a communication-only floor, not an achieved token rate.

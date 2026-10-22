@@ -1,0 +1,14 @@
+test_availability_is_conditional (test_feasibility.FeasibilityTests.test_availability_is_conditional) ... ok
+test_bounded_adversarial_pipeline (test_feasibility.FeasibilityTests.test_bounded_adversarial_pipeline) ... ok
+test_exact_ceiling (test_feasibility.FeasibilityTests.test_exact_ceiling) ... ok
+test_ideal_weight_units (test_feasibility.FeasibilityTests.test_ideal_weight_units) ... ok
+test_invalid_inputs (test_feasibility.FeasibilityTests.test_invalid_inputs) ... ok
+test_kv_architecture_and_scaling (test_feasibility.FeasibilityTests.test_kv_architecture_and_scaling) ... ok
+test_pipeline_hops_and_units (test_feasibility.FeasibilityTests.test_pipeline_hops_and_units) ... ok
+test_reproduction_is_byte_deterministic (test_feasibility.FeasibilityTests.test_reproduction_is_byte_deterministic) ... ok
+test_table_coverage_and_legacy_consistency (test_feasibility.FeasibilityTests.test_table_coverage_and_legacy_consistency) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.008s
+
+OK

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="420" viewBox="0 0 920 420" role="img" aria-label="Weight storage grows with parameter budget">
+<rect width="100%" height="100%" fill="#f8fafc"/>
+<style>text{font-family:Arial,sans-serif;fill:#172238}.small{font-size:13px}.label{font-size:15px}</style>
+<text x="24" y="30" font-size="21" font-weight="bold">Weight storage grows with parameter budget</text>
+<text x="24" y="54" class="small">Nominal 4-bit weights only; no metadata, KV cache, workspace or replicas</text>
+<line x1="105" y1="348.00" x2="882" y2="348.00" stroke="#dbe3ed"/>
+<text x="97" y="353.00" text-anchor="end" class="small">0.0</text>
+<line x1="105" y1="283.50" x2="882" y2="283.50" stroke="#dbe3ed"/>
+<text x="97" y="288.50" text-anchor="end" class="small">51.2</text>
+<line x1="105" y1="219.00" x2="882" y2="219.00" stroke="#dbe3ed"/>
+<text x="97" y="224.00" text-anchor="end" class="small">102.4</text>
+<line x1="105" y1="154.50" x2="882" y2="154.50" stroke="#dbe3ed"/>
+<text x="97" y="159.50" text-anchor="end" class="small">153.7</text>
+<line x1="105" y1="90.00" x2="882" y2="90.00" stroke="#dbe3ed"/>
+<text x="97" y="95.00" text-anchor="end" class="small">204.9</text>
+<rect x="143.85" y="347.41" width="116.55" height="0.59" rx="4" fill="#4f6aaf"/>
+<text x="202.12" y="339.41" text-anchor="middle" class="label">0.47</text>
+<text x="202.12" y="373" text-anchor="middle" class="label">1B</text>
+<rect x="338.10" y="343.31" width="116.55" height="4.69" rx="4" fill="#4f6aaf"/>
+<text x="396.38" y="335.31" text-anchor="middle" class="label">3.73</text>
+<text x="396.38" y="373" text-anchor="middle" class="label">8B</text>
+<rect x="532.35" y="306.95" width="116.55" height="41.05" rx="4" fill="#4f6aaf"/>
+<text x="590.62" y="298.95" text-anchor="middle" class="label">32.60</text>
+<text x="590.62" y="373" text-anchor="middle" class="label">70B</text>
+<rect x="726.60" y="113.45" width="116.55" height="234.55" rx="4" fill="#4f6aaf"/>
+<text x="784.88" y="105.45" text-anchor="middle" class="label">186.26</text>
+<text x="784.88" y="373" text-anchor="middle" class="label">400B</text>
+<text x="105" y="402" class="small">GiB. Calculations only; not observed device or network performance.</text>
+</svg>

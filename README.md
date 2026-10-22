@@ -1,39 +1,39 @@
-# consent-compute-mesh
+# Household Compute
 
-Opt-in local inference mesh research: reproducible bandwidth, latency, memory, and device feasibility experiments.
+Could a household's consenting devices run a model together that none could run alone? When would sharing the work improve response time, and when would slow workers or communication make it worse?
 
-## Study guide
+This project studies memory, compute and communication limits through explicit calculations and single-host experiments. All participating devices are assumed to have informed consent. Physical-device and cross-host inference remain future work.
 
-- [Household capability atlas](HOUSEHOLD_ATLAS.md): cited device exemplars and calculated capacity/communication scenarios, not measured household performance.
-- [Local-process baseline](PROCESS_EXPERIMENT.md), [repeated timings](REPEATED_EXPERIMENT.md) and [pretrained split results](PRETRAINED_RESULTS.md): single-host experiments; root commands below cover the analytical baseline and local kernel benchmark.
-- [Transport-codec results](studies/transport-codecs/TRANSPORT_RESULTS.md): 216 retained paired measurements over local pipes with injected delays. FP16 preserved next-token argmax on the 12 fixed diagnostic prefixes; the tested global-scale INT8 codec preserved none. This does not establish general language quality or real-link performance.
-- [Cached-decode results](studies/cached-decode/CACHED_RESULTS.md): two retained 36-row runs match monolithic FP32 logits and greedy tokens, with stage-local KV caches. Split median decode was slower; no total-memory saving or network speedup is established.
-- [TCP framing codec](studies/tcp-framing-codec/README.md): source-only framing, transcript checks and byte accounting, with 34 retained synthetic unit tests. No sockets or model execution are implemented in this slice; its byte forecasts are not TCP measurements.
+## Start here
 
-For transport/cached evidence checks, pinned-model setup and optional reproduction, use the [study guide](studies/README.md). The TCP codec has its own model-free test entrypoint. Physical-device and cross-host validation have not been performed.
+- [Build intuition with a small offline example](docs/START_HERE.md).
+- [Read the research overview](docs/RESEARCH_OVERVIEW.md) for hypotheses, controls and the evidence boundary.
+- [Read the household feasibility paper](docs/HOUSEHOLD_INFERENCE_FEASIBILITY.md) for resource bounds and scaling assumptions.
+- [Follow the study guide](studies/README.md) to inspect retained evidence before running an optional model experiment.
 
-## Household research: full informed consent assumed
+## Watch the concept in 24 seconds
 
-The [household capability atlas and calculated graphs](HOUSEHOLD_ATLAS.md) assume every participating device is fully informed and consenting. It includes 14 cited device exemplars, explicit device-informed memory baskets, 27 model-capacity scenarios and communication sensitivity, not invented household averages. Smart-fridge reusable capacity remains visibly unknown. Earlier non-opt-in examples/tests are safety negative controls, not the research premise.
+[![A hypothetical 70B model has 32.596 GiB ideal 4-bit weights and a 43.616 GiB illustrative runtime envelope. Assumed 12-GiB allocatable pools yield aggregate floors of three and four. Serial link delays grow with boundaries, not memory capacity.](docs/animations/poster.png)](docs/animations/concept.mp4)
 
-![Household memory scenario](figures/household_memory_headline.svg)
+[MP4](docs/animations/concept.mp4) · [Optional GIF preview](docs/animations/concept.gif) · [Text transcript](docs/animations/transcript.txt) · [Captions](docs/animations/captions.vtt)
 
-## Current status
+Calculated assumptions · not device or model measurements. No audio. The poster and transcript provide a no-motion alternative. The downloaded [HTML viewer](docs/animations/index.html) is static by default and never autoplays.
 
-This is a newly implemented, offline research baseline, not a recovered previous implementation or a working distributed inference service. It contains:
+## What is established
 
-- A serial, single-request placement/latency model with explicit consent, memory and directed-link checks.
-- A real, local CPU microbenchmark using a deterministic pure-Python matrix-vector kernel.
-- Reproducible illustrative scenarios and automated tests.
-- A real two-process, private-pipe synthetic neural forward experiment with explicitly emulated link delays and failure handling. See [Process experiments](PROCESS_EXPERIMENT.md).
-- Persistent workers with warmup-excluded, repeated paired timing and correctness checks. See [Repeated experiments](REPEATED_EXPERIMENT.md).
-- An optional pinned real pretrained-model partition with local-only weights, binary pipe transport and logit equivalence checks. See [Pretrained experiment](PRETRAINED_EXPERIMENT.md) and [recorded results](PRETRAINED_RESULTS.md).
+**The household scenarios are calculations.** [Device exemplars and capacity scenarios](HOUSEHOLD_ATLAS.md) document 14 cited devices, explicit memory baskets and 27 model-capacity cases. Available memory, supported kernels and effective links must be measured before a scenario describes a real household. Reusable smart-fridge capacity is still unknown.
 
-The optional process experiment starts only fixed-kernel local workers after explicit opt-in. It does **not** discover devices, listen on a port, connect to hardware, install packages, execute remote jobs. The original synthetic commands need Python 3.10+ and its standard library; only the optional pretrained experiment loads an AI model and requires the separately documented dependencies and local weights.
+**A small pretrained model was split correctly on one host.** The [local-process studies](PROCESS_EXPERIMENT.md), [repeated timings](REPEATED_EXPERIMENT.md) and [pretrained split results](PRETRAINED_RESULTS.md) test execution and accounting with private pipes and, where specified, injected communication delays.
+
+**Transport choices changed outputs.** In [216 retained transport measurements](studies/transport-codecs/TRANSPORT_RESULTS.md), FP16 preserved next-token argmax on all 12 fixed diagnostic prefixes; the tested global-scale INT8 codec preserved none. This is a narrow codec diagnostic, not a language-quality benchmark.
+
+**Cached decoding matched the reference, with overhead.** Two [36-row retained runs](studies/cached-decode/CACHED_RESULTS.md) reproduced full-vocabulary FP32 logits and greedy tokens exactly. Split median decode was slower. A full reference model, duplicated embedding/head weights and audit traffic prevent a total-memory-saving claim.
+
+The [TCP framing codec](studies/tcp-framing-codec/README.md) has synthetic tests and byte accounting. It implements neither sockets nor model execution; its forecasts are not TCP measurements.
 
 ## Run
 
-From the repository root:
+Python 3.10+ standard library only, from the repository root:
 
 ```sh
 python -m unittest discover -s tests -v
@@ -41,55 +41,12 @@ python -m mesh simulate examples/illustrative.json
 python -m mesh benchmark --size 64 --iterations 20 --repeats 5
 ```
 
-Both commands print JSON. To save your own measurements, redirect stdout to a new file. Benchmark runtime depends on your Python interpreter, hardware and competing workloads. Do not compare its nominal operation rate directly to advertised hardware FLOPS or use it as an LLM token-rate estimate.
+The last two commands print JSON. Redirect to a new file to retain your own output. Simulation rates and device budgets in the example are invented assumptions. The benchmark measures a pure-Python matrix-vector kernel; its operation rate cannot be used as an LLM token-rate estimate. Optional pretrained studies require their separately documented runtime and pinned local weights.
 
-## What is measured versus assumed?
+## Read the limits correctly
 
-`results/illustrative_simulation.json` is deterministic analytical output from `examples/illustrative.json`. Every device speed, memory budget, stage workload and link property in that example is invented for demonstration, not a specification or measured performance claim. The device names are illustrative labels.
+Model parameter count describes a resource budget. Capability requires separate task measurements; fitting a larger model does not establish greater intelligence. Pooling memory also leaves per-device placement, runtime workspace, KV caches, critical-path latency and communication costs to solve.
 
-`results/local_cpu_benchmark.json` is a real run in the development cloud container using CPython 3.12.14 on x86_64. The file contains raw wall-clock samples, workload dimensions, operation-count convention and checksum. It is a small Python-interpreter benchmark, **not measured neural-network inference**. It does not calibrate the simulated device rates. Run it yourself for a fresh local measurement.
+The baseline requires `consent: true` for selected devices. That field exercises placement logic; actual deployment needs owner enrollment, authenticated peers, encrypted transport, resource quotas and revocation. The root program has no device discovery or network listener. [The overview](docs/RESEARCH_OVERVIEW.md) and [feasibility paper](docs/HOUSEHOLD_INFERENCE_FEASIBILITY.md) distinguish safe test design from a deployed consent system.
 
-## Example finding, not a hardware claim
-
-For the supplied assumptions:
-
-- Laptop-only placement: 0.60 seconds estimated compute, no inter-device transfer.
-- Split placement: 1.50 seconds estimated compute plus 1.01 seconds transfer, totaling 2.51 seconds.
-- ESP32-class placeholder: rejected because the assigned stage exceeds its assumed memory budget.
-- Non-opted-in device: rejected even though its illustrative speed is highest.
-
-This demonstrates why adding devices is not automatically faster: intermediate activations and slower workers can dominate. It does not prove that all distributed placements are slower.
-
-## Model and units
-
-Each stage has `operations`, `weights_bytes`, `workspace_bytes` and `output_bytes`. Each device supplies available `memory_bytes`, effective workload-specific `ops_per_second` and explicit boolean `consent`. Each directed link supplies effective payload `bytes_per_second` and fixed one-way `latency_ms` per crossing. Bytes are bytes, not bits; seconds are used in results.
-
-For a given explicit placement:
-
-```text
-compute_seconds = sum(stage.operations / assigned_device.ops_per_second)
-transfer_seconds = sum(boundary.output_bytes / link.bytes_per_second + link.latency_ms / 1000)
-total_seconds = compute_seconds + transfer_seconds
-```
-
-Only boundaries crossing devices incur a modeled transfer. There is no automatic network routing. Reverse links must be provided separately.
-
-All assigned stage weights stay resident. Required memory on each device is the sum of its assigned weights plus the maximum of `(workspace + incoming activation + output activation)` across its stages. This conservative accounting assumes separate activation buffers, no in-place reuse, and no overlapped requests. Initial input is zero bytes in this baseline, and weights are already loaded. Set device memory to the budget available **after** OS/runtime reservations, not advertised total RAM.
-
-The command compares only the named placements in the scenario, sorts feasible candidates by estimated latency, and reports rejected candidates separately. It is not an exhaustive placement optimizer.
-
-## ESP32 and heterogeneous-device limits
-
-The ESP32-class example is deliberately a small-memory placeholder. No ESP32 board, firmware or wireless link was benchmarked. Boards differ in RAM, PSRAM, kernels, clocks and radio conditions. Do not assume a desktop model shard fits or that Wi-Fi bandwidth implies adequate inference throughput. A real experiment must measure available memory, supported kernels, workload latency, thermal/power limits and effective link transfer independently. Tiny sensor preprocessing or control may be a more realistic role than a large-model shard, but that remains an untested design direction here.
-
-## Safety and consent boundary
-
-This program is offline. A boolean in a local JSON file is **not** authentication, proof of ownership, or enforceable consent. It only exercises fail-closed placement logic: a selected device must have `consent: true`, exactly. It grants no access to anyone's devices.
-
-Before adding any real worker protocol, require explicit owner enrollment, authenticated peers, encrypted transport, bounded work/resource quotas, cancellation and consent revocation, and a clear policy for whether prompts or activations may leave the originating device. Do not add arbitrary remote-code execution or expose a listener by default. The root baseline has no network transport. The separate source-only framing codec above also implements no sockets.
-
-## Limitations and next experiments
-
-The root analytical model omits batching, pipeline overlap, concurrent requests, KV caches, serialization, weight loading, packet contention, reliability, tensor parallelism and energy. The separate transport and cached-decode studies test narrower parts of this list. Supply those memory costs conservatively through workspace where applicable, or extend and validate the model before drawing conclusions. Effective operations/sec is workload-specific, not a portable device constant.
-
-The optional pretrained extension now validates a small real model split across local processes. Next useful work is broader input validation and, under a separately reviewed consent/authentication design, comparison against actual cross-host transfers. Physical-device and cross-host validation have not been performed.
+The next empirical step is a bounded, authenticated cross-host comparison with the best measured single-device placement, reporting latency, throughput, memory, quality and energy separately. Original code and documentation are [MIT licensed](LICENSE); external models and sources retain their own terms.

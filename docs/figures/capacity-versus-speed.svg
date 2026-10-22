@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="650" viewBox="0 0 1120 650" role="img" aria-labelledby="title description">
+<title id="title">Check capacity and speed separately</title><desc id="description">Hypothetical 70B ideal 4-bit weights occupy 32.596 GiB; an explicit runtime envelope occupies 43.616 GiB. At assumed 12 GiB aggregate pools these require at least three and four pools respectively, without establishing placement. The same total serial compute plus a hypothetical transfer takes longer than unsplit compute.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto-start-reverse"><path d="M0,0 L10,4 L0,8 Z" fill="#076f6d"/></marker></defs>
+<rect width="1120" height="650" fill="#f8faf9"/>
+<g font-family="DejaVu Sans, sans-serif">
+<text x="32" y="45" font-size="30" fill="#153346" font-weight="bold">Check capacity and speed separately</text>
+<text x="32" y="78" font-size="17" fill="#486271" font-weight="normal">HYPOTHETICAL CALCULATIONS: no devices, links, or model were measured here</text>
+<rect x="32" y="103" width="1056" height="239" rx="12" fill="#ffffff" stroke="#9bb0b8" stroke-width="1.5"/>
+<text x="52" y="139" font-size="23" fill="#076f6d" font-weight="bold">1. Capacity lower bound</text>
+<text x="52" y="178" font-size="21" fill="#153346" font-weight="bold">70B parameters</text>
+<text x="52" y="207" font-size="20" fill="#153346" font-weight="normal">4 bits / weight</text>
+<text x="52" y="255" font-size="18" fill="#486271" font-weight="normal">Assumed pool:</text>
+<text x="52" y="284" font-size="20" fill="#153346" font-weight="bold">12 GiB allocatable</text>
+<text x="370" y="163" font-size="20" fill="#153346" font-weight="bold">Ideal weights: 32.596 GiB</text>
+<rect x="370" y="176" width="440.05" height="27" rx="3" fill="#076f6d"/>
+<line x1="532.0" y1="176" x2="532.0" y2="203" stroke="#ffffff" stroke-width="2.5" stroke-dasharray="8 7"/>
+<line x1="694.0" y1="176" x2="694.0" y2="203" stroke="#ffffff" stroke-width="2.5" stroke-dasharray="8 7"/>
+<text x="826.0459999999999" y="198" font-size="20" fill="#076f6d" font-weight="bold">3 pools</text>
+<text x="370" y="250" font-size="20" fill="#153346" font-weight="bold">Illustrative envelope: 43.616 GiB</text>
+<rect x="370" y="263" width="588.82" height="27" rx="3" fill="#9c460c"/>
+<line x1="532.0" y1="263" x2="532.0" y2="290" stroke="#ffffff" stroke-width="2.5" stroke-dasharray="8 7"/>
+<line x1="694.0" y1="263" x2="694.0" y2="290" stroke="#ffffff" stroke-width="2.5" stroke-dasharray="8 7"/>
+<line x1="856.0" y1="263" x2="856.0" y2="290" stroke="#ffffff" stroke-width="2.5" stroke-dasharray="8 7"/>
+<text x="974.816" y="285" font-size="20" fill="#9c460c" font-weight="bold">4 pools</text>
+<text x="370" y="321" font-size="17" fill="#486271" font-weight="normal">Envelope = 1.20 × weights + 2.5 GiB KV + 2 GiB workspace</text>
+<rect x="32" y="368" width="1056" height="203" rx="12" fill="#ffffff" stroke="#9bb0b8" stroke-width="1.5"/>
+<text x="52" y="405" font-size="23" fill="#076f6d" font-weight="bold">2. Single-request time (serial stages)</text>
+<text x="52" y="448" font-size="20" fill="#153346" font-weight="bold">Unsplit</text>
+<rect x="330" y="426" width="420" height="30" rx="4" fill="#076f6d"/>
+<text x="770" y="448" font-size="20" fill="#076f6d" font-weight="bold">0.6000000 s</text>
+<text x="52" y="502" font-size="20" fill="#153346" font-weight="bold">Split</text>
+<rect x="330" y="480" width="210" height="30" rx="4" fill="#076f6d"/><rect x="540" y="480" width="18.58752" height="30" fill="#9c460c"/><rect x="558.58752" y="480" width="210" height="30" rx="4" fill="#076f6d"/>
+<text x="789" y="502" font-size="20" fill="#9c460c" font-weight="bold">0.6265536 s</text>
+<text x="330" y="544" font-size="18" fill="#486271" font-weight="normal">0.30 s + 26.5536 ms transfer + 0.30 s</text>
+<text x="32" y="609" font-size="18" fill="#486271" font-weight="normal">Transfer assumes 16 KiB, 20 Mbps payload bandwidth, and 20 ms one-way latency.</text>
+<text x="32" y="636" font-size="16" fill="#486271" font-weight="normal">Memory pooling does not prove placement or speed. Runtime overheads are explicit examples, not measurements.</text>
+</g></svg>

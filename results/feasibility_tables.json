@@ -1,0 +1,655 @@
+{
+  "assumptions_version": 1,
+  "evidence_kind": "analytical_not_measurement",
+  "tables": {
+    "availability": [
+      {
+        "independent_no_replication": 0.6561,
+        "independent_two_replicas_per_stage": 0.96059601,
+        "per_node_probability": 0.9,
+        "perfectly_common_mode_probability": 0.9,
+        "stages": 4
+      },
+      {
+        "independent_no_replication": 0.1853020188851841,
+        "independent_two_replicas_per_stage": 0.8514577710948756,
+        "per_node_probability": 0.9,
+        "perfectly_common_mode_probability": 0.9,
+        "stages": 16
+      },
+      {
+        "independent_no_replication": 0.0011790184577738583,
+        "independent_two_replicas_per_stage": 0.5255964875255623,
+        "per_node_probability": 0.9,
+        "perfectly_common_mode_probability": 0.9,
+        "stages": 64
+      },
+      {
+        "independent_no_replication": 0.96059601,
+        "independent_two_replicas_per_stage": 0.9996000599960001,
+        "per_node_probability": 0.99,
+        "perfectly_common_mode_probability": 0.99,
+        "stages": 4
+      },
+      {
+        "independent_no_replication": 0.8514577710948756,
+        "independent_two_replicas_per_stage": 0.9984011994401819,
+        "per_node_probability": 0.99,
+        "perfectly_common_mode_probability": 0.99,
+        "stages": 16
+      },
+      {
+        "independent_no_replication": 0.5255964875255623,
+        "independent_two_replicas_per_stage": 0.9936201183994614,
+        "per_node_probability": 0.99,
+        "perfectly_common_mode_probability": 0.99,
+        "stages": 64
+      }
+    ],
+    "communication": [
+      {
+        "activation_bytes": 16384,
+        "communication_only_tps_ceiling": 884.1170146551237,
+        "communication_seconds_per_token": 0.001131072,
+        "one_way_ms": 1,
+        "payload_mbps": 1000,
+        "setting": "assumed_local",
+        "stages": 2
+      },
+      {
+        "activation_bytes": 16384,
+        "communication_only_tps_ceiling": 37.659677030609785,
+        "communication_seconds_per_token": 0.0265536,
+        "one_way_ms": 20,
+        "payload_mbps": 20,
+        "setting": "assumed_impaired",
+        "stages": 2
+      },
+      {
+        "activation_bytes": 16384,
+        "communication_only_tps_ceiling": 7.923026215709142,
+        "communication_seconds_per_token": 0.1262144,
+        "one_way_ms": 100,
+        "payload_mbps": 5,
+        "setting": "assumed_stress",
+        "stages": 2
+      },
+      {
+        "activation_bytes": 16384,
+        "communication_only_tps_ceiling": 294.7056715517079,
+        "communication_seconds_per_token": 0.003393216,
+        "one_way_ms": 1,
+        "payload_mbps": 1000,
+        "setting": "assumed_local",
+        "stages": 4
+      },
+      {
+        "activation_bytes": 16384,
+        "communication_only_tps_ceiling": 12.553225676869928,
+        "communication_seconds_per_token": 0.0796608,
+        "one_way_ms": 20,
+        "payload_mbps": 20,
+        "setting": "assumed_impaired",
+        "stages": 4
+      },
+      {
+        "activation_bytes": 16384,
+        "communication_only_tps_ceiling": 2.641008738569714,
+        "communication_seconds_per_token": 0.3786432,
+        "one_way_ms": 100,
+        "payload_mbps": 5,
+        "setting": "assumed_stress",
+        "stages": 4
+      },
+      {
+        "activation_bytes": 16384,
+        "communication_only_tps_ceiling": 58.94113431034157,
+        "communication_seconds_per_token": 0.01696608,
+        "one_way_ms": 1,
+        "payload_mbps": 1000,
+        "setting": "assumed_local",
+        "stages": 16
+      },
+      {
+        "activation_bytes": 16384,
+        "communication_only_tps_ceiling": 2.5106451353739856,
+        "communication_seconds_per_token": 0.398304,
+        "one_way_ms": 20,
+        "payload_mbps": 20,
+        "setting": "assumed_impaired",
+        "stages": 16
+      },
+      {
+        "activation_bytes": 16384,
+        "communication_only_tps_ceiling": 0.5282017477139428,
+        "communication_seconds_per_token": 1.893216,
+        "one_way_ms": 100,
+        "payload_mbps": 5,
+        "setting": "assumed_stress",
+        "stages": 16
+      },
+      {
+        "activation_bytes": 16384,
+        "communication_only_tps_ceiling": 14.033603407224186,
+        "communication_seconds_per_token": 0.071257536,
+        "one_way_ms": 1,
+        "payload_mbps": 1000,
+        "setting": "assumed_local",
+        "stages": 64
+      },
+      {
+        "activation_bytes": 16384,
+        "communication_only_tps_ceiling": 0.5977726512795204,
+        "communication_seconds_per_token": 1.6728768,
+        "one_way_ms": 20,
+        "payload_mbps": 20,
+        "setting": "assumed_impaired",
+        "stages": 64
+      },
+      {
+        "activation_bytes": 16384,
+        "communication_only_tps_ceiling": 0.1257623208842721,
+        "communication_seconds_per_token": 7.9515072,
+        "one_way_ms": 100,
+        "payload_mbps": 5,
+        "setting": "assumed_stress",
+        "stages": 64
+      }
+    ],
+    "dense_matmul_budget": [
+      {
+        "assumed_active_dense_matmul_gflop_per_token": 2,
+        "assumed_active_dense_matmul_tflop_per_second": 0.002,
+        "parameters_billion": 1,
+        "target_tokens_per_second": 1
+      },
+      {
+        "assumed_active_dense_matmul_gflop_per_token": 2,
+        "assumed_active_dense_matmul_tflop_per_second": 0.01,
+        "parameters_billion": 1,
+        "target_tokens_per_second": 5
+      },
+      {
+        "assumed_active_dense_matmul_gflop_per_token": 2,
+        "assumed_active_dense_matmul_tflop_per_second": 0.02,
+        "parameters_billion": 1,
+        "target_tokens_per_second": 10
+      },
+      {
+        "assumed_active_dense_matmul_gflop_per_token": 16,
+        "assumed_active_dense_matmul_tflop_per_second": 0.016,
+        "parameters_billion": 8,
+        "target_tokens_per_second": 1
+      },
+      {
+        "assumed_active_dense_matmul_gflop_per_token": 16,
+        "assumed_active_dense_matmul_tflop_per_second": 0.08,
+        "parameters_billion": 8,
+        "target_tokens_per_second": 5
+      },
+      {
+        "assumed_active_dense_matmul_gflop_per_token": 16,
+        "assumed_active_dense_matmul_tflop_per_second": 0.16,
+        "parameters_billion": 8,
+        "target_tokens_per_second": 10
+      },
+      {
+        "assumed_active_dense_matmul_gflop_per_token": 140,
+        "assumed_active_dense_matmul_tflop_per_second": 0.14,
+        "parameters_billion": 70,
+        "target_tokens_per_second": 1
+      },
+      {
+        "assumed_active_dense_matmul_gflop_per_token": 140,
+        "assumed_active_dense_matmul_tflop_per_second": 0.7,
+        "parameters_billion": 70,
+        "target_tokens_per_second": 5
+      },
+      {
+        "assumed_active_dense_matmul_gflop_per_token": 140,
+        "assumed_active_dense_matmul_tflop_per_second": 1.4,
+        "parameters_billion": 70,
+        "target_tokens_per_second": 10
+      },
+      {
+        "assumed_active_dense_matmul_gflop_per_token": 800,
+        "assumed_active_dense_matmul_tflop_per_second": 0.8,
+        "parameters_billion": 400,
+        "target_tokens_per_second": 1
+      },
+      {
+        "assumed_active_dense_matmul_gflop_per_token": 800,
+        "assumed_active_dense_matmul_tflop_per_second": 4.0,
+        "parameters_billion": 400,
+        "target_tokens_per_second": 5
+      },
+      {
+        "assumed_active_dense_matmul_gflop_per_token": 800,
+        "assumed_active_dense_matmul_tflop_per_second": 8.0,
+        "parameters_billion": 400,
+        "target_tokens_per_second": 10
+      }
+    ],
+    "kv_sensitivity": [
+      {
+        "batch": 1,
+        "context_tokens": 2048,
+        "fp16_kv_gib": 0.625
+      },
+      {
+        "batch": 4,
+        "context_tokens": 2048,
+        "fp16_kv_gib": 2.5
+      },
+      {
+        "batch": 1,
+        "context_tokens": 8192,
+        "fp16_kv_gib": 2.5
+      },
+      {
+        "batch": 4,
+        "context_tokens": 8192,
+        "fp16_kv_gib": 10.0
+      },
+      {
+        "batch": 1,
+        "context_tokens": 32768,
+        "fp16_kv_gib": 10.0
+      },
+      {
+        "batch": 4,
+        "context_tokens": 32768,
+        "fp16_kv_gib": 40.0
+      },
+      {
+        "batch": 1,
+        "context_tokens": 131072,
+        "fp16_kv_gib": 40.0
+      },
+      {
+        "batch": 4,
+        "context_tokens": 131072,
+        "fp16_kv_gib": 160.0
+      }
+    ],
+    "memory_sensitivity": [
+      {
+        "household_gib": 4,
+        "ideal_weight_gib": 3.725290298461914,
+        "illustrative_envelope_gib": 7.470348358154297,
+        "illustrative_envelope_households": 2,
+        "kv_gib": 1.0,
+        "parameters_billion": 8,
+        "weight_bits": 4,
+        "weight_only_households": 1
+      },
+      {
+        "household_gib": 12,
+        "ideal_weight_gib": 3.725290298461914,
+        "illustrative_envelope_gib": 7.470348358154297,
+        "illustrative_envelope_households": 1,
+        "kv_gib": 1.0,
+        "parameters_billion": 8,
+        "weight_bits": 4,
+        "weight_only_households": 1
+      },
+      {
+        "household_gib": 24,
+        "ideal_weight_gib": 3.725290298461914,
+        "illustrative_envelope_gib": 7.470348358154297,
+        "illustrative_envelope_households": 1,
+        "kv_gib": 1.0,
+        "parameters_billion": 8,
+        "weight_bits": 4,
+        "weight_only_households": 1
+      },
+      {
+        "household_gib": 4,
+        "ideal_weight_gib": 7.450580596923828,
+        "illustrative_envelope_gib": 11.940696716308594,
+        "illustrative_envelope_households": 3,
+        "kv_gib": 1.0,
+        "parameters_billion": 8,
+        "weight_bits": 8,
+        "weight_only_households": 2
+      },
+      {
+        "household_gib": 12,
+        "ideal_weight_gib": 7.450580596923828,
+        "illustrative_envelope_gib": 11.940696716308594,
+        "illustrative_envelope_households": 1,
+        "kv_gib": 1.0,
+        "parameters_billion": 8,
+        "weight_bits": 8,
+        "weight_only_households": 1
+      },
+      {
+        "household_gib": 24,
+        "ideal_weight_gib": 7.450580596923828,
+        "illustrative_envelope_gib": 11.940696716308594,
+        "illustrative_envelope_households": 1,
+        "kv_gib": 1.0,
+        "parameters_billion": 8,
+        "weight_bits": 8,
+        "weight_only_households": 1
+      },
+      {
+        "household_gib": 4,
+        "ideal_weight_gib": 14.901161193847656,
+        "illustrative_envelope_gib": 20.881393432617188,
+        "illustrative_envelope_households": 6,
+        "kv_gib": 1.0,
+        "parameters_billion": 8,
+        "weight_bits": 16,
+        "weight_only_households": 4
+      },
+      {
+        "household_gib": 12,
+        "ideal_weight_gib": 14.901161193847656,
+        "illustrative_envelope_gib": 20.881393432617188,
+        "illustrative_envelope_households": 2,
+        "kv_gib": 1.0,
+        "parameters_billion": 8,
+        "weight_bits": 16,
+        "weight_only_households": 2
+      },
+      {
+        "household_gib": 24,
+        "ideal_weight_gib": 14.901161193847656,
+        "illustrative_envelope_gib": 20.881393432617188,
+        "illustrative_envelope_households": 1,
+        "kv_gib": 1.0,
+        "parameters_billion": 8,
+        "weight_bits": 16,
+        "weight_only_households": 1
+      },
+      {
+        "household_gib": 4,
+        "ideal_weight_gib": 32.59629011154175,
+        "illustrative_envelope_gib": 43.6155481338501,
+        "illustrative_envelope_households": 11,
+        "kv_gib": 2.5,
+        "parameters_billion": 70,
+        "weight_bits": 4,
+        "weight_only_households": 9
+      },
+      {
+        "household_gib": 12,
+        "ideal_weight_gib": 32.59629011154175,
+        "illustrative_envelope_gib": 43.6155481338501,
+        "illustrative_envelope_households": 4,
+        "kv_gib": 2.5,
+        "parameters_billion": 70,
+        "weight_bits": 4,
+        "weight_only_households": 3
+      },
+      {
+        "household_gib": 24,
+        "ideal_weight_gib": 32.59629011154175,
+        "illustrative_envelope_gib": 43.6155481338501,
+        "illustrative_envelope_households": 2,
+        "kv_gib": 2.5,
+        "parameters_billion": 70,
+        "weight_bits": 4,
+        "weight_only_households": 2
+      },
+      {
+        "household_gib": 4,
+        "ideal_weight_gib": 65.1925802230835,
+        "illustrative_envelope_gib": 82.7310962677002,
+        "illustrative_envelope_households": 21,
+        "kv_gib": 2.5,
+        "parameters_billion": 70,
+        "weight_bits": 8,
+        "weight_only_households": 17
+      },
+      {
+        "household_gib": 12,
+        "ideal_weight_gib": 65.1925802230835,
+        "illustrative_envelope_gib": 82.7310962677002,
+        "illustrative_envelope_households": 7,
+        "kv_gib": 2.5,
+        "parameters_billion": 70,
+        "weight_bits": 8,
+        "weight_only_households": 6
+      },
+      {
+        "household_gib": 24,
+        "ideal_weight_gib": 65.1925802230835,
+        "illustrative_envelope_gib": 82.7310962677002,
+        "illustrative_envelope_households": 4,
+        "kv_gib": 2.5,
+        "parameters_billion": 70,
+        "weight_bits": 8,
+        "weight_only_households": 3
+      },
+      {
+        "household_gib": 4,
+        "ideal_weight_gib": 130.385160446167,
+        "illustrative_envelope_gib": 160.9621925354004,
+        "illustrative_envelope_households": 41,
+        "kv_gib": 2.5,
+        "parameters_billion": 70,
+        "weight_bits": 16,
+        "weight_only_households": 33
+      },
+      {
+        "household_gib": 12,
+        "ideal_weight_gib": 130.385160446167,
+        "illustrative_envelope_gib": 160.9621925354004,
+        "illustrative_envelope_households": 14,
+        "kv_gib": 2.5,
+        "parameters_billion": 70,
+        "weight_bits": 16,
+        "weight_only_households": 11
+      },
+      {
+        "household_gib": 24,
+        "ideal_weight_gib": 130.385160446167,
+        "illustrative_envelope_gib": 160.9621925354004,
+        "illustrative_envelope_households": 7,
+        "kv_gib": 2.5,
+        "parameters_billion": 70,
+        "weight_bits": 16,
+        "weight_only_households": 6
+      },
+      {
+        "household_gib": 4,
+        "ideal_weight_gib": 188.5928213596344,
+        "illustrative_envelope_gib": 232.24888563156128,
+        "illustrative_envelope_households": 59,
+        "kv_gib": 3.9375,
+        "parameters_billion": 405,
+        "weight_bits": 4,
+        "weight_only_households": 48
+      },
+      {
+        "household_gib": 12,
+        "ideal_weight_gib": 188.5928213596344,
+        "illustrative_envelope_gib": 232.24888563156128,
+        "illustrative_envelope_households": 20,
+        "kv_gib": 3.9375,
+        "parameters_billion": 405,
+        "weight_bits": 4,
+        "weight_only_households": 16
+      },
+      {
+        "household_gib": 24,
+        "ideal_weight_gib": 188.5928213596344,
+        "illustrative_envelope_gib": 232.24888563156128,
+        "illustrative_envelope_households": 10,
+        "kv_gib": 3.9375,
+        "parameters_billion": 405,
+        "weight_bits": 4,
+        "weight_only_households": 8
+      },
+      {
+        "household_gib": 4,
+        "ideal_weight_gib": 377.1856427192688,
+        "illustrative_envelope_gib": 458.56027126312256,
+        "illustrative_envelope_households": 115,
+        "kv_gib": 3.9375,
+        "parameters_billion": 405,
+        "weight_bits": 8,
+        "weight_only_households": 95
+      },
+      {
+        "household_gib": 12,
+        "ideal_weight_gib": 377.1856427192688,
+        "illustrative_envelope_gib": 458.56027126312256,
+        "illustrative_envelope_households": 39,
+        "kv_gib": 3.9375,
+        "parameters_billion": 405,
+        "weight_bits": 8,
+        "weight_only_households": 32
+      },
+      {
+        "household_gib": 24,
+        "ideal_weight_gib": 377.1856427192688,
+        "illustrative_envelope_gib": 458.56027126312256,
+        "illustrative_envelope_households": 20,
+        "kv_gib": 3.9375,
+        "parameters_billion": 405,
+        "weight_bits": 8,
+        "weight_only_households": 16
+      },
+      {
+        "household_gib": 4,
+        "ideal_weight_gib": 754.3712854385376,
+        "illustrative_envelope_gib": 911.1830425262451,
+        "illustrative_envelope_households": 228,
+        "kv_gib": 3.9375,
+        "parameters_billion": 405,
+        "weight_bits": 16,
+        "weight_only_households": 189
+      },
+      {
+        "household_gib": 12,
+        "ideal_weight_gib": 754.3712854385376,
+        "illustrative_envelope_gib": 911.1830425262451,
+        "illustrative_envelope_households": 76,
+        "kv_gib": 3.9375,
+        "parameters_billion": 405,
+        "weight_bits": 16,
+        "weight_only_households": 63
+      },
+      {
+        "household_gib": 24,
+        "ideal_weight_gib": 754.3712854385376,
+        "illustrative_envelope_gib": 911.1830425262451,
+        "illustrative_envelope_households": 38,
+        "kv_gib": 3.9375,
+        "parameters_billion": 405,
+        "weight_bits": 16,
+        "weight_only_households": 32
+      }
+    ],
+    "synthetic_stage_sensitivity": [
+      {
+        "compute_stage_only_aggregate_tps_ceiling": 50.0,
+        "ideal_single_request_tps": 6.263278149677316,
+        "serial_communication_seconds": 0.0796608,
+        "serial_compute_seconds": 0.08,
+        "setting": "balanced",
+        "stage_compute_ms": [
+          20,
+          20,
+          20,
+          20
+        ]
+      },
+      {
+        "compute_stage_only_aggregate_tps_ceiling": 10.0,
+        "ideal_single_request_tps": 4.172563890298288,
+        "serial_communication_seconds": 0.0796608,
+        "serial_compute_seconds": 0.16,
+        "setting": "one_5x_straggler",
+        "stage_compute_ms": [
+          20,
+          20,
+          20,
+          100
+        ]
+      }
+    ],
+    "weight_floors": [
+      {
+        "conditional_homes_at_12gib": 1,
+        "ideal_weight_gib": 0.46566128730773926,
+        "parameters_billion": 1,
+        "weight_bits": 4
+      },
+      {
+        "conditional_homes_at_12gib": 1,
+        "ideal_weight_gib": 0.9313225746154785,
+        "parameters_billion": 1,
+        "weight_bits": 8
+      },
+      {
+        "conditional_homes_at_12gib": 1,
+        "ideal_weight_gib": 1.862645149230957,
+        "parameters_billion": 1,
+        "weight_bits": 16
+      },
+      {
+        "conditional_homes_at_12gib": 1,
+        "ideal_weight_gib": 3.725290298461914,
+        "parameters_billion": 8,
+        "weight_bits": 4
+      },
+      {
+        "conditional_homes_at_12gib": 1,
+        "ideal_weight_gib": 7.450580596923828,
+        "parameters_billion": 8,
+        "weight_bits": 8
+      },
+      {
+        "conditional_homes_at_12gib": 2,
+        "ideal_weight_gib": 14.901161193847656,
+        "parameters_billion": 8,
+        "weight_bits": 16
+      },
+      {
+        "conditional_homes_at_12gib": 3,
+        "ideal_weight_gib": 32.59629011154175,
+        "parameters_billion": 70,
+        "weight_bits": 4
+      },
+      {
+        "conditional_homes_at_12gib": 6,
+        "ideal_weight_gib": 65.1925802230835,
+        "parameters_billion": 70,
+        "weight_bits": 8
+      },
+      {
+        "conditional_homes_at_12gib": 11,
+        "ideal_weight_gib": 130.385160446167,
+        "parameters_billion": 70,
+        "weight_bits": 16
+      },
+      {
+        "conditional_homes_at_12gib": 16,
+        "ideal_weight_gib": 186.2645149230957,
+        "parameters_billion": 400,
+        "weight_bits": 4
+      },
+      {
+        "conditional_homes_at_12gib": 32,
+        "ideal_weight_gib": 372.5290298461914,
+        "parameters_billion": 400,
+        "weight_bits": 8
+      },
+      {
+        "conditional_homes_at_12gib": 63,
+        "ideal_weight_gib": 745.0580596923828,
+        "parameters_billion": 400,
+        "weight_bits": 16
+      }
+    ]
+  },
+  "units": {
+    "links": "Mbps = 10^6 bits/s, one-way latency",
+    "memory": "GiB = 2^30 bytes",
+    "parameters": "B = 10^9 parameters"
+  }
+}

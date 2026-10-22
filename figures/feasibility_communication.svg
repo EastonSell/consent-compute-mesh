@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="420" viewBox="0 0 920 420" role="img" aria-label="More serial boundaries reduce the communication ceiling">
+<rect width="100%" height="100%" fill="#f8fafc"/>
+<style>text{font-family:Arial,sans-serif;fill:#172238}.small{font-size:13px}.label{font-size:15px}</style>
+<text x="24" y="30" font-size="21" font-weight="bold">More serial boundaries reduce the communication ceiling</text>
+<text x="24" y="54" class="small">70B architecture width; FP16 activations; assumed 20Mbps and 20ms one-way</text>
+<line x1="105" y1="348.00" x2="882" y2="348.00" stroke="#dbe3ed"/>
+<text x="97" y="353.00" text-anchor="end" class="small">0.0</text>
+<line x1="105" y1="283.50" x2="882" y2="283.50" stroke="#dbe3ed"/>
+<text x="97" y="288.50" text-anchor="end" class="small">10.4</text>
+<line x1="105" y1="219.00" x2="882" y2="219.00" stroke="#dbe3ed"/>
+<text x="97" y="224.00" text-anchor="end" class="small">20.7</text>
+<line x1="105" y1="154.50" x2="882" y2="154.50" stroke="#dbe3ed"/>
+<text x="97" y="159.50" text-anchor="end" class="small">31.1</text>
+<line x1="105" y1="90.00" x2="882" y2="90.00" stroke="#dbe3ed"/>
+<text x="97" y="95.00" text-anchor="end" class="small">41.4</text>
+<rect x="143.85" y="113.45" width="116.55" height="234.55" rx="4" fill="#22816e"/>
+<text x="202.12" y="105.45" text-anchor="middle" class="label">37.66</text>
+<text x="202.12" y="373" text-anchor="middle" class="label">2 stages</text>
+<rect x="338.10" y="269.82" width="116.55" height="78.18" rx="4" fill="#22816e"/>
+<text x="396.38" y="261.82" text-anchor="middle" class="label">12.55</text>
+<text x="396.38" y="373" text-anchor="middle" class="label">4 stages</text>
+<rect x="532.35" y="332.36" width="116.55" height="15.64" rx="4" fill="#22816e"/>
+<text x="590.62" y="324.36" text-anchor="middle" class="label">2.51</text>
+<text x="590.62" y="373" text-anchor="middle" class="label">16 stages</text>
+<rect x="726.60" y="344.28" width="116.55" height="3.72" rx="4" fill="#22816e"/>
+<text x="784.88" y="336.28" text-anchor="middle" class="label">0.60</text>
+<text x="784.88" y="373" text-anchor="middle" class="label">64 stages</text>
+<text x="105" y="402" class="small">Communication-only tokens/s ceiling. Calculations only; not observed device or network performance.</text>
+</svg>
