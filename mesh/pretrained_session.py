@@ -3,7 +3,10 @@ import json
 import math
 import struct
 import multiprocessing
-import resource
+try:
+    import resource
+except ImportError:  # Windows and other platforms without Unix resource accounting.
+    resource = None
 import time
 
 from .pretrained_protocol import MAX_FRAME_BYTES, decode_frame, encode_frame, validate_tokens
@@ -11,11 +14,17 @@ from .process_mesh import _Stopped, _check, _wait
 from .session import WorkerSession
 
 
+def _peak_rss_kib():
+    if resource is None:
+        return None
+    return resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+
+
 def _validate_metrics(report, timing_key):
     value = report[timing_key]
     if isinstance(value, bool) or not isinstance(value, (int, float)) or not math.isfinite(value) or value < 0:
         raise ValueError('invalid worker timing')
-    if type(report['peak_rss_kib']) is not int or report['peak_rss_kib'] <= 0:
+    if report['peak_rss_kib'] is not None and (type(report['peak_rss_kib']) is not int or report['peak_rss_kib'] <= 0):
         raise ValueError('invalid worker memory metric')
 
 
@@ -50,7 +59,7 @@ def _model_worker(connection, directory, stage):
         started = time.perf_counter()
         partition = Partition(directory, stage)
         connection.send_bytes(json.dumps({'ready': True, 'stage': stage, 'load_seconds': time.perf_counter() - started,
-                                          'peak_rss_kib': resource.getrusage(resource.RUSAGE_SELF).ru_maxrss}).encode())
+                                          'peak_rss_kib': _peak_rss_kib()}).encode())
         request_id = 0
         with torch.inference_mode():
             while True:
@@ -64,7 +73,7 @@ def _model_worker(connection, directory, stage):
                 elapsed = time.perf_counter() - started
                 frame = pack_tensor(output)
                 connection.send_bytes(json.dumps({'stage': stage, 'request_id': request_id, 'compute_seconds': elapsed,
-                                                  'peak_rss_kib': resource.getrusage(resource.RUSAGE_SELF).ru_maxrss}).encode())
+                                                  'peak_rss_kib': _peak_rss_kib()}).encode())
                 connection.send_bytes(frame)
     except (EOFError, BrokenPipeError):
         return

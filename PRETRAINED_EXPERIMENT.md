@@ -11,6 +11,54 @@ This extension runs real pretrained SmolLM2-135M-Instruct weights in two persist
 
 The local config and safetensors must match the SHA-256 values in `mesh/pretrained_model.py`. The loader verifies them, uses only local files, disables remote-code trust and requires safetensors. The CLI sets Hugging Face offline flags. No credentials are required. Existing synthetic commands still require only Python's standard library.
 
+### Clean Linux CPU setup (commands for the reader, not auto-executed)
+
+From a checkout, use Python 3.12 and an isolated environment. PyTorch's official
+[previous-version instructions](https://docs.pytorch.org/get-started/previous-versions/)
+provide the CPU-only wheel index for 2.5.1. This experiment does not need torchvision
+or torchaudio. These commands download packages; review them before running:
+
+```sh
+python3.12 -m venv .venv-pretrained
+. .venv-pretrained/bin/activate
+python -m pip install torch==2.5.1 --index-url https://download.pytorch.org/whl/cpu
+python -m pip install transformers==4.46.3 safetensors==0.4.5 numpy==2.3.5 huggingface_hub==0.27.1
+python -c "import torch; assert torch.__version__.split('+')[0] == '2.5.1'; assert torch.version.cuda is None; print(torch.__version__)"
+```
+
+Download only the public pinned data files, never Python code, from the
+[model repository at the fixed revision](https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct/tree/12fd25f77366fa6b3b4b768ec3050bf629380bac).
+The [official Hub download guide](https://huggingface.co/docs/huggingface_hub/v0.27.1/guides/download)
+documents revision pinning, file allowlists and a local destination. This download
+is a separate explicit network step; inference remains local-only. No login or
+credential is needed (`token=False` disables sending a saved token):
+
+```sh
+export HF_HOME="$PWD/.hf-cache"
+python - <<'PYDOWNLOAD'
+from huggingface_hub import snapshot_download
+snapshot_download(
+    repo_id="HuggingFaceTB/SmolLM2-135M-Instruct",
+    revision="12fd25f77366fa6b3b4b768ec3050bf629380bac",
+    local_dir="models/SmolLM2-135M-Instruct-12fd25f",
+    allow_patterns=["config.json", "generation_config.json", "model.safetensors", "README.md"],
+    token=False,
+)
+from mesh.pretrained_model import verify_model
+print(verify_model("models/SmolLM2-135M-Instruct-12fd25f"))
+PYDOWNLOAD
+export HF_HUB_OFFLINE=1
+export TRANSFORMERS_OFFLINE=1
+python -m mesh.pretrained_experiment --opt-in --model-dir models/SmolLM2-135M-Instruct-12fd25f --repeats 3
+```
+
+The model weights are approximately 269 MB on disk; runtime and FP32 working
+memory need substantially more. Keep the model's Apache-2.0 notice. The narrow
+experiment uses fixed token IDs, so tokenizer files are not required by this
+recipe. A failed hash check must be investigated, not bypassed. The recipe is
+based on official APIs and the previously tested shared runtime; it has not been
+rerun as a fresh installation in this checkpoint.
+
 With the optional runtime and pinned model files already available:
 
 ```sh

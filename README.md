@@ -2,6 +2,12 @@
 
 Opt-in local inference mesh research: reproducible bandwidth, latency, memory, and device feasibility experiments.
 
+## Household research: full informed consent assumed
+
+The [household capability atlas and calculated graphs](HOUSEHOLD_ATLAS.md) assume every participating device is fully informed and consenting. It includes 14 cited device exemplars, explicit device-informed memory baskets, 27 model-capacity scenarios and communication sensitivity, not invented household averages. Smart-fridge reusable capacity remains visibly unknown. Earlier non-opt-in examples/tests are safety negative controls, not the research premise.
+
+![Household memory scenario](figures/household_memory_headline.svg)
+
 ## Current status
 
 This is a newly implemented, offline research baseline, not a recovered previous implementation or a working distributed inference service. It contains:

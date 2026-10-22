@@ -55,5 +55,18 @@ class SessionProtocolTests(unittest.TestCase):
         self.check_bad_reply([json.dumps({'stage': 0, 'request_id': 1, 'compute_seconds': .01, 'peak_rss_kib': 100}).encode(), b'bad frame'])
 
 
+class OptionalResourceTests(unittest.TestCase):
+    def test_module_imports_without_unix_resource(self):
+        import importlib.util
+        import sys
+        from pathlib import Path
+        import mesh.pretrained_session
+        spec = importlib.util.spec_from_file_location('mesh._without_resource', Path(mesh.pretrained_session.__file__))
+        module = importlib.util.module_from_spec(spec)
+        with patch.dict(sys.modules, {'resource': None}):
+            spec.loader.exec_module(module)
+        self.assertIsNone(module._peak_rss_kib())
+
+
 if __name__ == '__main__':
     unittest.main()
