@@ -17,3 +17,8 @@ PROCESS_EXPERIMENT.md
 results/local_process_no_delay.json
 results/local_process_emulated_link.json
 results/local_process_disconnect.json
+mesh/session.py
+mesh/repeated.py
+tests/test_repeated.py
+REPEATED_EXPERIMENT.md
+results/repeated_process_suite.json
