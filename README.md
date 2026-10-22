@@ -2,6 +2,16 @@
 
 Opt-in local inference mesh research: reproducible bandwidth, latency, memory, and device feasibility experiments.
 
+## Study guide
+
+- [Household capability atlas](HOUSEHOLD_ATLAS.md): cited device exemplars and calculated capacity/communication scenarios, not measured household performance.
+- [Local-process baseline](PROCESS_EXPERIMENT.md), [repeated timings](REPEATED_EXPERIMENT.md) and [pretrained split results](PRETRAINED_RESULTS.md): single-host experiments; root commands below cover the analytical baseline and local kernel benchmark.
+- [Transport-codec results](studies/transport-codecs/TRANSPORT_RESULTS.md): 216 retained paired measurements over local pipes with injected delays. FP16 preserved next-token argmax on the 12 fixed diagnostic prefixes; the tested global-scale INT8 codec preserved none. This does not establish general language quality or real-link performance.
+- [Cached-decode results](studies/cached-decode/CACHED_RESULTS.md): two retained 36-row runs match monolithic FP32 logits and greedy tokens, with stage-local KV caches. Split median decode was slower; no total-memory saving or network speedup is established.
+- [TCP framing codec](studies/tcp-framing-codec/README.md): source-only framing, transcript checks and byte accounting, with 34 retained synthetic unit tests. No sockets or model execution are implemented in this slice; its byte forecasts are not TCP measurements.
+
+For transport/cached evidence checks, pinned-model setup and optional reproduction, use the [study guide](studies/README.md). The TCP codec has its own model-free test entrypoint. Physical-device and cross-host validation have not been performed.
+
 ## Household research: full informed consent assumed
 
 The [household capability atlas and calculated graphs](HOUSEHOLD_ATLAS.md) assume every participating device is fully informed and consenting. It includes 14 cited device exemplars, explicit device-informed memory baskets, 27 model-capacity scenarios and communication sensitivity, not invented household averages. Smart-fridge reusable capacity remains visibly unknown. Earlier non-opt-in examples/tests are safety negative controls, not the research premise.
@@ -76,10 +86,10 @@ The ESP32-class example is deliberately a small-memory placeholder. No ESP32 boa
 
 This program is offline. A boolean in a local JSON file is **not** authentication, proof of ownership, or enforceable consent. It only exercises fail-closed placement logic: a selected device must have `consent: true`, exactly. It grants no access to anyone's devices.
 
-Before adding any real worker protocol, require explicit owner enrollment, authenticated peers, encrypted transport, bounded work/resource quotas, cancellation and consent revocation, and a clear policy for whether prompts or activations may leave the originating device. Do not add arbitrary remote-code execution or expose a listener by default. There is no real network protocol in this checkpoint.
+Before adding any real worker protocol, require explicit owner enrollment, authenticated peers, encrypted transport, bounded work/resource quotas, cancellation and consent revocation, and a clear policy for whether prompts or activations may leave the originating device. Do not add arbitrary remote-code execution or expose a listener by default. The root baseline has no network transport. The separate source-only framing codec above also implements no sockets.
 
 ## Limitations and next experiments
 
-The model omits batching, pipeline overlap, concurrent requests, KV caches, serialization, weight loading, packet contention, reliability, tensor parallelism and energy. Supply those memory costs conservatively through workspace where applicable, or extend and validate the model before drawing conclusions. Effective operations/sec is workload-specific, not a portable device constant.
+The root analytical model omits batching, pipeline overlap, concurrent requests, KV caches, serialization, weight loading, packet contention, reliability, tensor parallelism and energy. The separate transport and cached-decode studies test narrower parts of this list. Supply those memory costs conservatively through workspace where applicable, or extend and validate the model before drawing conclusions. Effective operations/sec is workload-specific, not a portable device constant.
 
 The optional pretrained extension now validates a small real model split across local processes. Next useful work is broader input validation and, under a separately reviewed consent/authentication design, comparison against actual cross-host transfers. Physical-device and cross-host validation have not been performed.
