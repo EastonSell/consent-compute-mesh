@@ -1,0 +1,271 @@
+{
+  "status": "Fixed before any model outcome; original authored diagnostic prefixes, not a quality benchmark",
+  "model_revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+  "tokenizer_sha256": {
+    "tokenizer.json": "9ca9acddb6525a194ec8ac7a87f24fbba7232a9a15ffa1af0c1224fcd888e47c",
+    "tokenizer_config.json": "4ec77d44f62efeb38d7e044a1db318f6a939438425312dfa333b8382dbad98df",
+    "special_tokens_map.json": "2b7379f3ae813529281a5c602bc5a11c1d4e0a99107aaa597fe936c1e813ca52"
+  },
+  "chat_template": false,
+  "cases": [
+    {
+      "id": "factual",
+      "text": "The largest planet in our solar system is",
+      "tokens": [
+        504,
+        3995,
+        3925,
+        281,
+        653,
+        3693,
+        817,
+        314
+      ]
+    },
+    {
+      "id": "reasoning",
+      "text": "Mira has three apples and buys two more. She now has",
+      "tokens": [
+        61,
+        3792,
+        553,
+        1296,
+        13855,
+        284,
+        34680,
+        827,
+        540,
+        30,
+        2306,
+        1209,
+        553
+      ]
+    },
+    {
+      "id": "code",
+      "text": "def square(x):\n    return",
+      "tokens": [
+        1604,
+        5222,
+        24,
+        104,
+        727,
+        472,
+        1003
+      ]
+    },
+    {
+      "id": "structured",
+      "text": "{\"city\": \"Oslo\", \"country\":",
+      "tokens": [
+        39428,
+        20721,
+        1799,
+        476,
+        11062,
+        5365,
+        1002,
+        476,
+        16664,
+        1799
+      ]
+    },
+    {
+      "id": "spanish",
+      "text": "El agua se congela cuando la temperatura alcanza",
+      "tokens": [
+        13793,
+        688,
+        6916,
+        427,
+        7186,
+        10945,
+        28869,
+        19347,
+        2618,
+        2000,
+        44545,
+        360,
+        4055,
+        5100
+      ]
+    },
+    {
+      "id": "french",
+      "text": "Pour faire du pain, on mélange la farine avec",
+      "tokens": [
+        64,
+        461,
+        33315,
+        5766,
+        1556,
+        28,
+        335,
+        283,
+        2756,
+        92,
+        776,
+        2618,
+        1869,
+        462,
+        253,
+        16849
+      ]
+    },
+    {
+      "id": "chinese",
+      "text": "春天到了，花园里的花开始",
+      "tokens": [
+        22178,
+        115,
+        18614,
+        119,
+        39964,
+        46025,
+        12831,
+        179,
+        228,
+        126,
+        23022,
+        251,
+        27219,
+        230,
+        11567,
+        179,
+        228,
+        126,
+        26602,
+        218,
+        47092,
+        229
+      ]
+    },
+    {
+      "id": "instruction",
+      "text": "List three ways to reduce household energy use:\n1.",
+      "tokens": [
+        6106,
+        1296,
+        1853,
+        288,
+        2369,
+        4929,
+        1439,
+        722,
+        42,
+        198,
+        33,
+        30
+      ]
+    },
+    {
+      "id": "narrative",
+      "text": "The small robot found a sealed letter beneath the old wooden bridge. Inside it was",
+      "tokens": [
+        504,
+        1165,
+        8085,
+        983,
+        253,
+        17659,
+        4386,
+        8823,
+        260,
+        1573,
+        10091,
+        7395,
+        30,
+        19373,
+        357,
+        436
+      ]
+    },
+    {
+      "id": "science",
+      "text": "A battery stores chemical energy and converts it into",
+      "tokens": [
+        49,
+        6979,
+        7821,
+        2819,
+        1439,
+        284,
+        18065,
+        357,
+        618
+      ]
+    },
+    {
+      "id": "comparison",
+      "text": "A local computer can avoid network delay, but a distributed model may offer",
+      "tokens": [
+        49,
+        1679,
+        2583,
+        416,
+        2482,
+        3082,
+        7223,
+        28,
+        564,
+        253,
+        6636,
+        1743,
+        654,
+        2626
+      ]
+    },
+    {
+      "id": "long_context",
+      "text": "A household research team compares three computers. The first has more memory, the second is faster, and the third uses less electricity. They want to share a language model while keeping their regular applications running. Before assigning layers, they measure",
+      "tokens": [
+        49,
+        4929,
+        1151,
+        2299,
+        21274,
+        1296,
+        5530,
+        30,
+        378,
+        808,
+        553,
+        540,
+        3500,
+        28,
+        260,
+        1796,
+        314,
+        5331,
+        28,
+        284,
+        260,
+        3464,
+        2925,
+        1181,
+        4866,
+        30,
+        1069,
+        1277,
+        288,
+        2419,
+        253,
+        1789,
+        1743,
+        979,
+        4825,
+        480,
+        2649,
+        3253,
+        4108,
+        30,
+        6993,
+        27656,
+        5466,
+        28,
+        502,
+        2621
+      ]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "kind": "analytical_comparison",
+  "feasible": [
+    {
+      "name": "laptop_only",
+      "kind": "analytical_estimate",
+      "placement": [
+        "laptop",
+        "laptop"
+      ],
+      "compute_seconds": 0.6,
+      "transfer_seconds": 0.0,
+      "total_seconds": 0.6,
+      "transferred_bytes": 0,
+      "required_memory_bytes": {
+        "laptop": 8001000
+      }
+    },
+    {
+      "name": "split_pipeline",
+      "kind": "analytical_estimate",
+      "placement": [
+        "small_cpu",
+        "laptop"
+      ],
+      "compute_seconds": 1.5,
+      "transfer_seconds": 1.01,
+      "total_seconds": 2.51,
+      "transferred_bytes": 1000000,
+      "required_memory_bytes": {
+        "small_cpu": 3500000,
+        "laptop": 6001000
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "name": "esp32_rejected",
+      "reason": "memory capacity exceeded on esp32_class_placeholder"
+    },
+    {
+      "name": "consent_rejected",
+      "reason": "explicit consent required for not_opted_in"
+    }
+  ]
+}

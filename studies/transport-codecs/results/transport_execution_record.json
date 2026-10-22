@@ -1,0 +1,24 @@
+{
+  "launch_after_utc": "2026-10-22T07:27:54Z",
+  "launch_observed_by_utc": "2026-10-22T07:28:12Z",
+  "last_running_observed_at_utc": "2026-10-22T07:29:24Z",
+  "completion_observed_by_utc": "2026-10-22T07:29:41Z",
+  "time_scope": "External observation bounds, not precise process timestamps or elapsed-time benchmark.",
+  "exit_code": 0,
+  "retained_runs": 1,
+  "outcome_driven_protocol_changes": false,
+  "frozen_source_hashes_matched_after_execution": true,
+  "python": "3.12.14",
+  "torch": "2.5.1+cpu",
+  "numpy": "2.3.5",
+  "transformers": "4.46.3",
+  "machine": "x86_64",
+  "result_sha256": "d0fbb5b5287fdb652eca86991975ca7196a1872c0cccff7495a11c94ec2961ac",
+  "post_run_files": [
+    "mesh/transport_report.py",
+    "results/transport_summary.csv",
+    "results/transport_prefix_metrics.csv",
+    "TRANSPORT_RESULTS.md"
+  ],
+  "public_allowlist_note": "PUBLIC_FILES.txt will subsequently add retained result/provenance and post-run report paths; model/codec/experiment source remains frozen."
+}

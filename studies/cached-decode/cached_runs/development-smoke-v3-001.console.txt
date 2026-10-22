@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/shared/mesh-cached-decode/cached_checkpoints/development_smoke.py", line 67, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/shared/mesh-cached-decode/cached_checkpoints/development_smoke.py", line 33, in main
+    if exceeded.is_set():raise RuntimeError('resource budget exceeded')
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: resource budget exceeded

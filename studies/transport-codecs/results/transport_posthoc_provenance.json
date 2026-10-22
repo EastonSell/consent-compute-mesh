@@ -1,0 +1,27 @@
+{
+  "kind": "post_hoc_diagnostic_provenance",
+  "authorized_after_primary_outcomes": true,
+  "hypothesis": "Large activation outliers force a coarse whole-tensor INT8 grid; inspect actual arrays and independently verify codec payload and metrics.",
+  "parameters_retuned": false,
+  "original_result_replaced": false,
+  "timing_claims": false,
+  "prefixes": "Same12fixed original prefixes; no selection after outcomes.",
+  "activation_diagnostic_launch_after_utc": "2026-10-22T07:32:18Z",
+  "activation_diagnostic_completed_by_utc": "2026-10-22T07:33:52Z",
+  "reference_supplement_launch_after_utc": "2026-10-22T07:33:52Z",
+  "reference_supplement_completed_by_utc": "2026-10-22T07:35:57Z",
+  "times_are_external_observation_bounds": true,
+  "commands": [
+    "HF_HOME=/workspace/shared/hf-cache /workspace/shared/adaptive-pretrained-venv/bin/python -m mesh.transport_diagnostic --model-dir /workspace/shared/pretrained-models/SmolLM2-135M-Instruct-12fd25f --opt-in",
+    "HF_HOME=/workspace/shared/hf-cache /workspace/shared/adaptive-pretrained-venv/bin/python -m mesh.transport_reference_diagnostic --model-dir /workspace/shared/pretrained-models/SmolLM2-135M-Instruct-12fd25f --opt-in"
+  ],
+  "sha256": {
+    "mesh/transport_diagnostic.py": "37313926ca92b888a5a10bc599a42cbab962de6f89ee2588494a640483875d2b",
+    "mesh/transport_reference_diagnostic.py": "f4d7f1f8ec01fb5f1fc1f591566b036b0fe2e6d1a6e75e3388b871608f0ea5e2",
+    "results/transport_posthoc_diagnostic.json": "a2f8d3462e61c12353197e5361bd3e0017ce88b529a124d9852cd436fab81d28",
+    "results/transport_posthoc_reference.json": "337bfe38804fce9fd770fb180e1e15e63eb03bfdd110121f7a867d9bc17cf3a1",
+    "results/transport_posthoc_arrays.npz": "3043ce60a55d048c7fcc96e847ae195ac766fa4c120d8602d0c62f6e24cc7446",
+    "results/transport_posthoc_reference.npz": "03a0ca68501392be9f501087a74ab66755a861f272eb3aa314b4a6fb023adef6",
+    "results/transport_comparison.json": "d0fbb5b5287fdb652eca86991975ca7196a1872c0cccff7495a11c94ec2961ac"
+  }
+}

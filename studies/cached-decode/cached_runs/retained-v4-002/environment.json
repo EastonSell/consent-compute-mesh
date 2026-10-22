@@ -1,0 +1,1 @@
+{"available_bytes": 8906485760, "budget_bytes": 3221225472, "decode_steps": 8, "prefixes": [[1, 2, 3, 4], [25, 100, 200, 300, 400, 500, 600, 700], [42, 42, 42, 42, 42, 42, 42, 42, 42, 42, 42, 42, 42, 42, 42, 42]], "start_unix": 1792656199.2132835, "thread_env": {"MKL_NUM_THREADS": "1", "OMP_NUM_THREADS": "1", "OPENBLAS_NUM_THREADS": "1"}}

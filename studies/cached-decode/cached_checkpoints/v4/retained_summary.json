@@ -1,0 +1,108 @@
+[
+  {
+    "cleanup": {
+      "cleanup_seconds": 0.5852648100008082,
+      "io_threads_cleaned_up": true,
+      "worker_exitcodes": [
+        0,
+        0
+      ],
+      "worker_forced_termination": [
+        false,
+        false
+      ],
+      "workers_cleaned_up": true
+    },
+    "peak_sampled_aggregate_rss_bytes": 2192982016,
+    "phases": {
+      "decode": {
+        "activation_frame_bytes_range": [
+          2407,
+          2408
+        ],
+        "all_ipc_bytes_range": [
+          201761,
+          201770
+        ],
+        "reference_ms_median": 67.93776399899798,
+        "rows": 32,
+        "split_ms_median": 74.9877385005675,
+        "split_ms_range": [
+          65.52954300059355,
+          96.23203899900545
+        ]
+      },
+      "prefill": {
+        "activation_frame_bytes_range": [
+          9320,
+          36970
+        ],
+        "all_ipc_bytes_range": [
+          215597,
+          270953
+        ],
+        "reference_ms_median": 98.55443099877448,
+        "rows": 4,
+        "split_ms_median": 98.9713015005691,
+        "split_ms_range": [
+          83.78625999830547,
+          107.76364699995611
+        ]
+      }
+    },
+    "run": "retained-v4-001"
+  },
+  {
+    "cleanup": {
+      "cleanup_seconds": 0.5403702410003461,
+      "io_threads_cleaned_up": true,
+      "worker_exitcodes": [
+        0,
+        0
+      ],
+      "worker_forced_termination": [
+        false,
+        false
+      ],
+      "workers_cleaned_up": true
+    },
+    "peak_sampled_aggregate_rss_bytes": 2169843712,
+    "phases": {
+      "decode": {
+        "activation_frame_bytes_range": [
+          2407,
+          2408
+        ],
+        "all_ipc_bytes_range": [
+          201760,
+          201770
+        ],
+        "reference_ms_median": 65.61787749888026,
+        "rows": 32,
+        "split_ms_median": 71.31023750116583,
+        "split_ms_range": [
+          60.88518199976534,
+          91.93515100196237
+        ]
+      },
+      "prefill": {
+        "activation_frame_bytes_range": [
+          9320,
+          36970
+        ],
+        "all_ipc_bytes_range": [
+          215596,
+          270954
+        ],
+        "reference_ms_median": 84.80969850097608,
+        "rows": 4,
+        "split_ms_median": 90.45324249927944,
+        "split_ms_range": [
+          85.09604400023818,
+          123.18366800172953
+        ]
+      }
+    },
+    "run": "retained-v4-002"
+  }
+]

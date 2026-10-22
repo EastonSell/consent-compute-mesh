@@ -1,0 +1,36 @@
+{
+  "kind": "local_process_experiment",
+  "status": "ok",
+  "width": 64,
+  "python": "3.12.14",
+  "implementation": "CPython",
+  "machine": "x86_64",
+  "reference_seconds": 0.0009106990000873338,
+  "worker_count": 2,
+  "worker_compute_seconds": [
+    0.00044411299995772424,
+    0.0004648130002351536
+  ],
+  "latency_ms_assumption": 10.0,
+  "bytes_per_second_assumption": 100000.0,
+  "fault_injected": null,
+  "timeout_seconds": 5,
+  "interstage_payload_bytes": 707,
+  "emulated_wait_requested_seconds": 0.017070000000000002,
+  "emulated_wait_observed_seconds": 0.017168852999930095,
+  "scope": "Actual same-host worker processes and fixed synthetic neural forward pass; not VMs, physical network, trained model, or device-performance measurement.",
+  "startup_seconds": 0.04421836900019116,
+  "max_abs_error": 0.0,
+  "output_checksum": 1.8531641873446378,
+  "inference_wall_seconds": 0.018732238999746187,
+  "cleanup_seconds": 0.006499892000192631,
+  "worker_exitcodes": [
+    0,
+    0
+  ],
+  "worker_forced_termination": [
+    false,
+    false
+  ],
+  "workers_cleaned_up": true
+}

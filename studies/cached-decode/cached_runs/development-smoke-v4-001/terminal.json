@@ -1,0 +1,1 @@
+{"cleanup": {"cleanup_seconds": 0.5965912389983714, "io_threads_cleaned_up": true, "worker_exitcodes": [0, 0], "worker_forced_termination": [false, false], "workers_cleaned_up": true}, "peak_sampled_aggregate_rss_bytes": 2161836032, "status": "complete"}

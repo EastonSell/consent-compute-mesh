@@ -1,0 +1,25 @@
+{
+  "amended_at_utc": "2026-10-22T07:25:37Z",
+  "model_forward_executed_before_amendment": false,
+  "retained_experiment_executed_before_amendment": false,
+  "reason": "Remove GitHub upload completion as a prerequisite; retain independent local source/protocol review before execution.",
+  "unchanged": [
+    "hypotheses",
+    "12prefixes and token IDs",
+    "codecs",
+    "metrics",
+    "216retained pairs",
+    "72excluded warmup pairs",
+    "fixed schedule",
+    "correctness and memory gates"
+  ],
+  "original_protocol_path": "data/transport_protocol_original.md",
+  "original_protocol_sha256": "aed9e2caf9ffcc96c2611d2f74581bb674d13d38766c240f5168bc9b092d88c0",
+  "amended_protocol_sha256": "feee05ab3d992d36ebafe25435afdf1380a6b54d02a869a3d884143461f38b28",
+  "review_corrections_at_utc": "2026-10-22T07:26:36Z",
+  "review_corrections": [
+    "Cast operands before subtraction and top-margin calculation, preserving intended finite float64 error metrics.",
+    "Add independent identity, KL direction and extreme finite-logit tests.",
+    "Explicitly disclose no incremental persistence on abrupt process termination."
+  ]
+}

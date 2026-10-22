@@ -1,0 +1,55 @@
+[
+  {
+    "path": "studies/cached-decode/CACHED_STAGE_HISTORY.md",
+    "archive_sha256": "2f0ebc8c0ac01a59dee48824105b941135b4cc1bf45a740b947b3c9b948c33fd",
+    "publication_sha256": "636cee35cc2e501ca01416eac7760972b516468b7d4b6e44b30b3362719e71bc",
+    "reason": "Remove non-scientific coordination prose; scientific results and frozen source unchanged."
+  },
+  {
+    "path": "studies/cached-decode/cached_checkpoints/README.md",
+    "archive_sha256": "134ce22778f78edd59415843969e25221c90461cc197dc2d05fe36676ead361f",
+    "publication_sha256": "103d00a462fd8875aa97054c8fa5b28a363a8e9836eca3bd00f6c9eb55af782a",
+    "reason": "Remove non-scientific coordination prose; scientific results and frozen source unchanged."
+  },
+  {
+    "path": "studies/transport-codecs/TRANSPORT_CHECKPOINT.md",
+    "archive_sha256": "5f71e81c3c6d0c08bb6742b55fe5a01ecb29bba6eacb0af1293826bc15c2f8b9",
+    "omitted": true,
+    "reason": "Non-scientific publication handoff."
+  },
+  {
+    "path": "studies/cached-decode/HOUSEHOLD_ATLAS.md",
+    "added_dependency_from": "studies/transport-codecs/HOUSEHOLD_ATLAS.md",
+    "sha256": "4d978ec703bc5abb428f7aa6be5f6c0b7b1208e6f5ee4b06c2335cf54b35754c"
+  },
+  {
+    "path": "studies/cached-decode/PRETRAINED_EXPERIMENT.md",
+    "added_dependency_from": "studies/transport-codecs/PRETRAINED_EXPERIMENT.md",
+    "sha256": "93be2a2654e203cba7930bce75812e72b6132125a63d818a6d64256ac82f8618"
+  },
+  {
+    "path": "studies/cached-decode/PRETRAINED_RESULTS.md",
+    "added_dependency_from": "studies/transport-codecs/PRETRAINED_RESULTS.md",
+    "sha256": "5cfbc9aaff6ce7b5d1f4fd9bcf476466786026d63df8da0076147e117ba6c77b"
+  },
+  {
+    "path": "studies/cached-decode/PROCESS_EXPERIMENT.md",
+    "added_dependency_from": "studies/transport-codecs/PROCESS_EXPERIMENT.md",
+    "sha256": "9e8010163a38d2586c0985ff87399dc586927fd024b163dc7ded4a8c65a2af73"
+  },
+  {
+    "path": "studies/cached-decode/REPEATED_EXPERIMENT.md",
+    "added_dependency_from": "studies/transport-codecs/REPEATED_EXPERIMENT.md",
+    "sha256": "6ca45505ccaa6ca64e0ec29db2abed9284fc68764c48a186fc6bbaf01d9081c7"
+  },
+  {
+    "path": "studies/cached-decode/TRANSPORT_EXPERIMENT.md",
+    "added_dependency_from": "studies/transport-codecs/TRANSPORT_EXPERIMENT.md",
+    "sha256": "feee05ab3d992d36ebafe25435afdf1380a6b54d02a869a3d884143461f38b28"
+  },
+  {
+    "path": "studies/cached-decode/TRANSPORT_RESULTS.md",
+    "added_dependency_from": "studies/transport-codecs/TRANSPORT_RESULTS.md",
+    "sha256": "ee9f9287e749834e737d0a03215e7449c24627835673ec79a6de4edc5101fece"
+  }
+]
