@@ -1,0 +1,25 @@
+{
+  "pinned_repository": "EastonSell/household-compute",
+  "pinned_commit": "0a58ffda9f982509ba76dd5f333dc8dfad90cf42",
+  "new_measurements": false,
+  "sources": [
+    {
+      "id": "accepted_paper",
+      "sha256": "6b85f357f4f4ecce1ef474b183ca1e15178701d53a7c0afd5b573b19c2d7b71e",
+      "scope": "Selected [8,2,2] GiB baskets, generic envelope, KV dimensions and assumed links",
+      "url": "https://github.com/EastonSell/household-compute/blob/0a58ffda9f982509ba76dd5f333dc8dfad90cf42/docs/HOUSEHOLD_INFERENCE_FEASIBILITY.md"
+    },
+    {
+      "id": "accepted_calculations",
+      "sha256": "5d70c2241a77ed865110ed99f865b142487114039e3974860818c10fa9cb47f0",
+      "scope": "Exact antecedent arithmetic; not measurement",
+      "url": "https://github.com/EastonSell/household-compute/blob/0a58ffda9f982509ba76dd5f333dc8dfad90cf42/calculations/feasibility.py"
+    },
+    {
+      "id": "prior_supplied_placement_model",
+      "sha256": "6261d97c45ddde5a7b4b629ae4a38bc8754c07c2cf9f754502f0c924a4462f47",
+      "scope": "Historical supplied-placement calculator; not a new inferred runtime measurement",
+      "url": "https://github.com/EastonSell/household-compute/blob/0a58ffda9f982509ba76dd5f333dc8dfad90cf42/mesh/model.py"
+    }
+  ]
+}

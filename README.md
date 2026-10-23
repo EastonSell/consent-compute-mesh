@@ -50,3 +50,7 @@ Model parameter count describes a resource budget. Capability requires separate 
 The baseline requires `consent: true` for selected devices. That field exercises placement logic; actual deployment needs owner enrollment, authenticated peers, encrypted transport, resource quotas and revocation. The root program has no device discovery or network listener. [The overview](docs/RESEARCH_OVERVIEW.md) and [feasibility paper](docs/HOUSEHOLD_INFERENCE_FEASIBILITY.md) distinguish safe test design from a deployed consent system.
 
 The next empirical step is a bounded, authenticated cross-host comparison with the best measured single-device placement, reporting latency, throughput, memory, quality and energy separately. Original code and documentation are [MIT licensed](LICENSE); external models and sources retain their own terms.
+
+## Bounded placement study
+
+[Placement certificates, complete scenario grid and reproduction](studies/bounded-placement-certificates/README.md) test the gap between aggregate memory and per-device placement. An expressly synthetic 43.616 GiB envelope needs 12 modeled devices/stages in the baseline four-home inventory; small per-stage reserves can make the placement impossible despite aggregate slack. This is assumption-conditional capacity/connectivity analysis, not deployment validation. The stage-count-first solver can choose a slower path than greedy: fewer stages are not a latency guarantee.

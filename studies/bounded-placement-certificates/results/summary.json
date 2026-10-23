@@ -1,0 +1,46 @@
+{
+  "aggregate_positive_solver_negative": [
+    "envelope_h4_r256",
+    "envelope_h4_r384",
+    "envelope_h4_r512",
+    "endpoint_h4_e0_w256",
+    "endpoint_h4_e536870912_w0",
+    "endpoint_h4_e536870912_w64",
+    "endpoint_h4_e536870912_w256",
+    "endpoint_h4_e1073741824_w0",
+    "endpoint_h4_e1073741824_w64",
+    "endpoint_h4_e1073741824_w256",
+    "endpoint_h4_e2147483648_w64",
+    "endpoint_h4_e2147483648_w256",
+    "endpoint_h4_e3221225472_w256",
+    "endpoint_h4_e4294967296_w0",
+    "endpoint_h4_e4294967296_w64",
+    "endpoint_h4_e4294967296_w256",
+    "endpoint_h4_e8589934592_w0",
+    "endpoint_h4_e8589934592_w64",
+    "endpoint_h4_e8589934592_w256",
+    "endpoint_h5_e8589934592_w0",
+    "endpoint_h5_e8589934592_w64",
+    "endpoint_h5_e8589934592_w256",
+    "indivisible_3gib",
+    "contiguity_2_6_2",
+    "stage_reserve",
+    "tied_duplication",
+    "missing_feedback_link"
+  ],
+  "all_outputs_are_assumption_conditional": true,
+  "case_count": 84,
+  "greedy_misses": [
+    "endpoint_h4_e2147483648_w0",
+    "endpoint_h4_e3221225472_w0",
+    "endpoint_h4_e3221225472_w64",
+    "greedy_endpoint_trap"
+  ],
+  "independently_checked_witnesses_and_bounds": 152,
+  "statuses": {
+    "feasible": 44,
+    "infeasible": 36,
+    "search_incomplete": 1,
+    "unknown": 3
+  }
+}

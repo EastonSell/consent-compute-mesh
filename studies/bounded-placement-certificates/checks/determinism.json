@@ -1,0 +1,29 @@
+{
+  "all_byte_identical": true,
+  "files": [
+    {
+      "byte_identical": true,
+      "file": "all_cases.json",
+      "original_sha256": "6064b2564df31cccb2fbebd1fcd7e576a0b687385b7b8f47d3a2ce0652d1c5fb",
+      "regenerated_sha256": "6064b2564df31cccb2fbebd1fcd7e576a0b687385b7b8f47d3a2ce0652d1c5fb"
+    },
+    {
+      "byte_identical": true,
+      "file": "independent_checks.json",
+      "original_sha256": "ccb80c250ea6922c03d47005140a29bc34218f8f48ed576d1e82d5269da4caeb",
+      "regenerated_sha256": "ccb80c250ea6922c03d47005140a29bc34218f8f48ed576d1e82d5269da4caeb"
+    },
+    {
+      "byte_identical": true,
+      "file": "sensitivity.csv",
+      "original_sha256": "2a0122d9757c713fed32f139b0e54c025e91e5af6be9f1df12b7e3aced190a5d",
+      "regenerated_sha256": "2a0122d9757c713fed32f139b0e54c025e91e5af6be9f1df12b7e3aced190a5d"
+    },
+    {
+      "byte_identical": true,
+      "file": "summary.json",
+      "original_sha256": "c8b96aa5ffc5643a7c4f8ba1343d7f44cac0d4bf647f16ad3a01ed327190e6a3",
+      "regenerated_sha256": "c8b96aa5ffc5643a7c4f8ba1343d7f44cac0d4bf647f16ad3a01ed327190e6a3"
+    }
+  ]
+}

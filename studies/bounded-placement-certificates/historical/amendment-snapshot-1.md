@@ -1,0 +1,3 @@
+# Prospective amendments
+
+2026-10-22, before implementation and numerical scenario results: the frozen grids include 3..6 homes of three devices, so the written 12-device input cap contradicted those grids. Raise only the accepted input-size cap to 18 devices. Retain 250,000 visited search states, 5,000,000 candidate transitions per pass, 128 layers, 150 scenario rows, 20,000 tiny cases and process timeouts unchanged. The larger input cap does not authorize uncapped enumeration; report `search_incomplete` if the same search limits are reached. Retain PROTOCOL.md unchanged and retain both hashes.
