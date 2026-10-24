@@ -1,0 +1,41 @@
+{
+  "optima": {
+    "restricted": null,
+    "expensive": 110,
+    "routed": 12
+  },
+  "interval_witnesses": {
+    "restricted": null,
+    "expensive": [
+      [
+        0,
+        1,
+        3
+      ],
+      [
+        0,
+        4,
+        5,
+        8
+      ],
+      102
+    ],
+    "routed": [
+      [
+        0,
+        1,
+        3
+      ],
+      [
+        0,
+        4,
+        5,
+        8
+      ],
+      4
+    ]
+  },
+  "self_loop_invariance_checks": 65536,
+  "additional_deadline_checks": 196608,
+  "passing_not_sufficient": "bidirected K2,3, five unit capacities, L=5; bound=5, no placement"
+}

@@ -1,0 +1,29 @@
+{
+  "evidence_kind": "synthetic_exact_arithmetic_not_measurement",
+  "directed_graphs": 4096,
+  "capacity_vectors": 3,
+  "exhaustive_bound_checks": 12288,
+  "star": {
+    "capacities": [
+      4,
+      1,
+      2,
+      3
+    ],
+    "aggregate": 10,
+    "scc_count": 1,
+    "cycle_capacity_bound": 7,
+    "required_layers": 8,
+    "feasible": false
+  },
+  "complete_graph": {
+    "exact_optimal_token_time": 110,
+    "units": "synthetic time units",
+    "deadline_109_bound": 7,
+    "deadline_110_bound": 10
+  },
+  "relay_closure": {
+    "exact_optimal_token_time": 12,
+    "feasible": true
+  }
+}

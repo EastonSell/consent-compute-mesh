@@ -1,0 +1,596 @@
+{
+  "evidence_kind": "synthetic_exact_arithmetic_not_measurement",
+  "directed_graphs": 4096,
+  "capacity_vectors": 3,
+  "exhaustive_bound_checks": 12288,
+  "star": {
+    "capacities": [
+      4,
+      1,
+      2,
+      3
+    ],
+    "aggregate": 10,
+    "scc_count": 1,
+    "cycle_capacity_bound": 7,
+    "required_layers": 8,
+    "feasible": false
+  },
+  "complete_graph": {
+    "exact_optimal_token_time": 110,
+    "units": "synthetic time units",
+    "deadline_109_bound": 7,
+    "deadline_110_bound": 10
+  },
+  "relay_closure": {
+    "exact_optimal_token_time": 12,
+    "feasible": true
+  },
+  "deadline_sweep": [
+    {
+      "deadline": 8,
+      "capacity_bound": 4,
+      "edge_limit": "-2"
+    },
+    {
+      "deadline": 9,
+      "capacity_bound": 4,
+      "edge_limit": "-1"
+    },
+    {
+      "deadline": 10,
+      "capacity_bound": 4,
+      "edge_limit": "0"
+    },
+    {
+      "deadline": 11,
+      "capacity_bound": 7,
+      "edge_limit": "1"
+    },
+    {
+      "deadline": 12,
+      "capacity_bound": 7,
+      "edge_limit": "2"
+    },
+    {
+      "deadline": 13,
+      "capacity_bound": 7,
+      "edge_limit": "3"
+    },
+    {
+      "deadline": 14,
+      "capacity_bound": 7,
+      "edge_limit": "4"
+    },
+    {
+      "deadline": 15,
+      "capacity_bound": 7,
+      "edge_limit": "5"
+    },
+    {
+      "deadline": 16,
+      "capacity_bound": 7,
+      "edge_limit": "6"
+    },
+    {
+      "deadline": 17,
+      "capacity_bound": 7,
+      "edge_limit": "7"
+    },
+    {
+      "deadline": 18,
+      "capacity_bound": 7,
+      "edge_limit": "8"
+    },
+    {
+      "deadline": 19,
+      "capacity_bound": 7,
+      "edge_limit": "9"
+    },
+    {
+      "deadline": 20,
+      "capacity_bound": 7,
+      "edge_limit": "10"
+    },
+    {
+      "deadline": 21,
+      "capacity_bound": 7,
+      "edge_limit": "11"
+    },
+    {
+      "deadline": 22,
+      "capacity_bound": 7,
+      "edge_limit": "12"
+    },
+    {
+      "deadline": 23,
+      "capacity_bound": 7,
+      "edge_limit": "13"
+    },
+    {
+      "deadline": 24,
+      "capacity_bound": 7,
+      "edge_limit": "14"
+    },
+    {
+      "deadline": 25,
+      "capacity_bound": 7,
+      "edge_limit": "15"
+    },
+    {
+      "deadline": 26,
+      "capacity_bound": 7,
+      "edge_limit": "16"
+    },
+    {
+      "deadline": 27,
+      "capacity_bound": 7,
+      "edge_limit": "17"
+    },
+    {
+      "deadline": 28,
+      "capacity_bound": 7,
+      "edge_limit": "18"
+    },
+    {
+      "deadline": 29,
+      "capacity_bound": 7,
+      "edge_limit": "19"
+    },
+    {
+      "deadline": 30,
+      "capacity_bound": 7,
+      "edge_limit": "20"
+    },
+    {
+      "deadline": 31,
+      "capacity_bound": 7,
+      "edge_limit": "21"
+    },
+    {
+      "deadline": 32,
+      "capacity_bound": 7,
+      "edge_limit": "22"
+    },
+    {
+      "deadline": 33,
+      "capacity_bound": 7,
+      "edge_limit": "23"
+    },
+    {
+      "deadline": 34,
+      "capacity_bound": 7,
+      "edge_limit": "24"
+    },
+    {
+      "deadline": 35,
+      "capacity_bound": 7,
+      "edge_limit": "25"
+    },
+    {
+      "deadline": 36,
+      "capacity_bound": 7,
+      "edge_limit": "26"
+    },
+    {
+      "deadline": 37,
+      "capacity_bound": 7,
+      "edge_limit": "27"
+    },
+    {
+      "deadline": 38,
+      "capacity_bound": 7,
+      "edge_limit": "28"
+    },
+    {
+      "deadline": 39,
+      "capacity_bound": 7,
+      "edge_limit": "29"
+    },
+    {
+      "deadline": 40,
+      "capacity_bound": 7,
+      "edge_limit": "30"
+    },
+    {
+      "deadline": 41,
+      "capacity_bound": 7,
+      "edge_limit": "31"
+    },
+    {
+      "deadline": 42,
+      "capacity_bound": 7,
+      "edge_limit": "32"
+    },
+    {
+      "deadline": 43,
+      "capacity_bound": 7,
+      "edge_limit": "33"
+    },
+    {
+      "deadline": 44,
+      "capacity_bound": 7,
+      "edge_limit": "34"
+    },
+    {
+      "deadline": 45,
+      "capacity_bound": 7,
+      "edge_limit": "35"
+    },
+    {
+      "deadline": 46,
+      "capacity_bound": 7,
+      "edge_limit": "36"
+    },
+    {
+      "deadline": 47,
+      "capacity_bound": 7,
+      "edge_limit": "37"
+    },
+    {
+      "deadline": 48,
+      "capacity_bound": 7,
+      "edge_limit": "38"
+    },
+    {
+      "deadline": 49,
+      "capacity_bound": 7,
+      "edge_limit": "39"
+    },
+    {
+      "deadline": 50,
+      "capacity_bound": 7,
+      "edge_limit": "40"
+    },
+    {
+      "deadline": 51,
+      "capacity_bound": 7,
+      "edge_limit": "41"
+    },
+    {
+      "deadline": 52,
+      "capacity_bound": 7,
+      "edge_limit": "42"
+    },
+    {
+      "deadline": 53,
+      "capacity_bound": 7,
+      "edge_limit": "43"
+    },
+    {
+      "deadline": 54,
+      "capacity_bound": 7,
+      "edge_limit": "44"
+    },
+    {
+      "deadline": 55,
+      "capacity_bound": 7,
+      "edge_limit": "45"
+    },
+    {
+      "deadline": 56,
+      "capacity_bound": 7,
+      "edge_limit": "46"
+    },
+    {
+      "deadline": 57,
+      "capacity_bound": 7,
+      "edge_limit": "47"
+    },
+    {
+      "deadline": 58,
+      "capacity_bound": 7,
+      "edge_limit": "48"
+    },
+    {
+      "deadline": 59,
+      "capacity_bound": 7,
+      "edge_limit": "49"
+    },
+    {
+      "deadline": 60,
+      "capacity_bound": 7,
+      "edge_limit": "50"
+    },
+    {
+      "deadline": 61,
+      "capacity_bound": 7,
+      "edge_limit": "51"
+    },
+    {
+      "deadline": 62,
+      "capacity_bound": 7,
+      "edge_limit": "52"
+    },
+    {
+      "deadline": 63,
+      "capacity_bound": 7,
+      "edge_limit": "53"
+    },
+    {
+      "deadline": 64,
+      "capacity_bound": 7,
+      "edge_limit": "54"
+    },
+    {
+      "deadline": 65,
+      "capacity_bound": 7,
+      "edge_limit": "55"
+    },
+    {
+      "deadline": 66,
+      "capacity_bound": 7,
+      "edge_limit": "56"
+    },
+    {
+      "deadline": 67,
+      "capacity_bound": 7,
+      "edge_limit": "57"
+    },
+    {
+      "deadline": 68,
+      "capacity_bound": 7,
+      "edge_limit": "58"
+    },
+    {
+      "deadline": 69,
+      "capacity_bound": 7,
+      "edge_limit": "59"
+    },
+    {
+      "deadline": 70,
+      "capacity_bound": 7,
+      "edge_limit": "60"
+    },
+    {
+      "deadline": 71,
+      "capacity_bound": 7,
+      "edge_limit": "61"
+    },
+    {
+      "deadline": 72,
+      "capacity_bound": 7,
+      "edge_limit": "62"
+    },
+    {
+      "deadline": 73,
+      "capacity_bound": 7,
+      "edge_limit": "63"
+    },
+    {
+      "deadline": 74,
+      "capacity_bound": 7,
+      "edge_limit": "64"
+    },
+    {
+      "deadline": 75,
+      "capacity_bound": 7,
+      "edge_limit": "65"
+    },
+    {
+      "deadline": 76,
+      "capacity_bound": 7,
+      "edge_limit": "66"
+    },
+    {
+      "deadline": 77,
+      "capacity_bound": 7,
+      "edge_limit": "67"
+    },
+    {
+      "deadline": 78,
+      "capacity_bound": 7,
+      "edge_limit": "68"
+    },
+    {
+      "deadline": 79,
+      "capacity_bound": 7,
+      "edge_limit": "69"
+    },
+    {
+      "deadline": 80,
+      "capacity_bound": 7,
+      "edge_limit": "70"
+    },
+    {
+      "deadline": 81,
+      "capacity_bound": 7,
+      "edge_limit": "71"
+    },
+    {
+      "deadline": 82,
+      "capacity_bound": 7,
+      "edge_limit": "72"
+    },
+    {
+      "deadline": 83,
+      "capacity_bound": 7,
+      "edge_limit": "73"
+    },
+    {
+      "deadline": 84,
+      "capacity_bound": 7,
+      "edge_limit": "74"
+    },
+    {
+      "deadline": 85,
+      "capacity_bound": 7,
+      "edge_limit": "75"
+    },
+    {
+      "deadline": 86,
+      "capacity_bound": 7,
+      "edge_limit": "76"
+    },
+    {
+      "deadline": 87,
+      "capacity_bound": 7,
+      "edge_limit": "77"
+    },
+    {
+      "deadline": 88,
+      "capacity_bound": 7,
+      "edge_limit": "78"
+    },
+    {
+      "deadline": 89,
+      "capacity_bound": 7,
+      "edge_limit": "79"
+    },
+    {
+      "deadline": 90,
+      "capacity_bound": 7,
+      "edge_limit": "80"
+    },
+    {
+      "deadline": 91,
+      "capacity_bound": 7,
+      "edge_limit": "81"
+    },
+    {
+      "deadline": 92,
+      "capacity_bound": 7,
+      "edge_limit": "82"
+    },
+    {
+      "deadline": 93,
+      "capacity_bound": 7,
+      "edge_limit": "83"
+    },
+    {
+      "deadline": 94,
+      "capacity_bound": 7,
+      "edge_limit": "84"
+    },
+    {
+      "deadline": 95,
+      "capacity_bound": 7,
+      "edge_limit": "85"
+    },
+    {
+      "deadline": 96,
+      "capacity_bound": 7,
+      "edge_limit": "86"
+    },
+    {
+      "deadline": 97,
+      "capacity_bound": 7,
+      "edge_limit": "87"
+    },
+    {
+      "deadline": 98,
+      "capacity_bound": 7,
+      "edge_limit": "88"
+    },
+    {
+      "deadline": 99,
+      "capacity_bound": 7,
+      "edge_limit": "89"
+    },
+    {
+      "deadline": 100,
+      "capacity_bound": 7,
+      "edge_limit": "90"
+    },
+    {
+      "deadline": 101,
+      "capacity_bound": 7,
+      "edge_limit": "91"
+    },
+    {
+      "deadline": 102,
+      "capacity_bound": 7,
+      "edge_limit": "92"
+    },
+    {
+      "deadline": 103,
+      "capacity_bound": 7,
+      "edge_limit": "93"
+    },
+    {
+      "deadline": 104,
+      "capacity_bound": 7,
+      "edge_limit": "94"
+    },
+    {
+      "deadline": 105,
+      "capacity_bound": 7,
+      "edge_limit": "95"
+    },
+    {
+      "deadline": 106,
+      "capacity_bound": 7,
+      "edge_limit": "96"
+    },
+    {
+      "deadline": 107,
+      "capacity_bound": 7,
+      "edge_limit": "97"
+    },
+    {
+      "deadline": 108,
+      "capacity_bound": 7,
+      "edge_limit": "98"
+    },
+    {
+      "deadline": 109,
+      "capacity_bound": 7,
+      "edge_limit": "99"
+    },
+    {
+      "deadline": 110,
+      "capacity_bound": 10,
+      "edge_limit": "100"
+    },
+    {
+      "deadline": 111,
+      "capacity_bound": 10,
+      "edge_limit": "101"
+    },
+    {
+      "deadline": 112,
+      "capacity_bound": 10,
+      "edge_limit": "102"
+    },
+    {
+      "deadline": 113,
+      "capacity_bound": 10,
+      "edge_limit": "103"
+    },
+    {
+      "deadline": 114,
+      "capacity_bound": 10,
+      "edge_limit": "104"
+    },
+    {
+      "deadline": 115,
+      "capacity_bound": 10,
+      "edge_limit": "105"
+    },
+    {
+      "deadline": 116,
+      "capacity_bound": 10,
+      "edge_limit": "106"
+    },
+    {
+      "deadline": 117,
+      "capacity_bound": 10,
+      "edge_limit": "107"
+    },
+    {
+      "deadline": 118,
+      "capacity_bound": 10,
+      "edge_limit": "108"
+    },
+    {
+      "deadline": 119,
+      "capacity_bound": 10,
+      "edge_limit": "109"
+    },
+    {
+      "deadline": 120,
+      "capacity_bound": 10,
+      "edge_limit": "110"
+    }
+  ]
+}
