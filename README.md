@@ -11,6 +11,14 @@ This project studies memory, compute and communication limits through explicit c
 - [Read the household feasibility paper](docs/HOUSEHOLD_INFERENCE_FEASIBILITY.md) for resource bounds and scaling assumptions.
 - [Follow the study guide](studies/README.md) to inspect retained evidence before running an optional model experiment.
 
+## Watch the narrated explanation
+
+[![Narrated concept illustration](docs/animations/narrated/poster.png)](docs/animations/narrated/concept.mp4)
+
+[58.8-second narrated MP4](docs/animations/narrated/concept.mp4) · [Complete transcript](docs/animations/narrated/transcript.txt) · [Captions](docs/animations/narrated/captions.vtt) · [Editable source and reproduction](docs/animations/narrated/RENDERING.md)
+
+Speech-led Manim animation with a synthetic stock voice. Calculated assumptions · not device or model measurements. This is an explanatory upgrade, not a new experimental result. Captions have approximate sentence timing. The [static-first viewer](docs/animations/narrated/index.html), poster and complete transcript provide a no-motion alternative. The original silent version and its historical QA remain unchanged below.
+
 ## Watch the concept in 24 seconds
 
 [![An analytical one-token serial graph shows increasing communication time as stage count grows. Under declared link assumptions, 16 stages give an optimistic communication-only ceiling of 2.511 tokens per second, not an achieved rate.](docs/animations/poster.png)](docs/animations/concept.mp4)

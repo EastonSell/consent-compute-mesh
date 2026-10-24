@@ -1,0 +1,47 @@
+{
+  "title": "Household Compute",
+  "repo": "household-compute",
+  "legacy_class": "CapacityLatency",
+  "segments": [
+    {
+      "id": "beat-1",
+      "start": 0.0,
+      "end": 15.966666666666667,
+      "text": "Pooling memory can make a larger model seem possible. Here, ideal four-bit weights take about thirty-three gibibytes. Add our assumed overhead, cache, and workspace, and the total rises to about forty-four.",
+      "visual": "Build weights bar, overhead, KV, workspace in sync with words; retain exact units visually.",
+      "chapter": "The example",
+      "tts_text": "Pooling memory can make a larger model seem possible. Here, ideal four-bit weights take about thirty-three gibby bytes. Add our assumed overhead, cache, and workspace, and the total rises to about forty-four.",
+      "frames": 479
+    },
+    {
+      "id": "beat-2",
+      "start": 15.966666666666667,
+      "end": 27.9,
+      "text": "At twelve usable gibibytes per pool, that means at least four pools in aggregate. But adding their capacities doesn't prove the model can actually be placed across them.",
+      "visual": "Step aggregate requirement from three to four twelve-GiB pools; leave lower-bound badge visible.",
+      "chapter": "What changes",
+      "tts_text": "At twelve usable gibby bytes per pool, that means at least four pools in aggregate. But adding their capacities doesn't prove the model can actually be placed across them.",
+      "frames": 358
+    },
+    {
+      "id": "beat-3",
+      "start": 27.9,
+      "end": 44.5,
+      "text": "Speed needs a separate calculation. In this one-token serial example, every stage depends on the previous one. With the stated link assumptions, sixteen stages spend about four tenths of a second on communication alone.",
+      "visual": "Separate pool count from stage count. Animate serial crossing dependency, then 4-to-16 stage cost chart.",
+      "chapter": "The mechanism",
+      "frames": 498
+    },
+    {
+      "id": "beat-4",
+      "start": 44.5,
+      "end": 58.733333333333334,
+      "text": "That gives an optimistic communication-only ceiling of about two and a half tokens per second. These are assumptions, not household measurements, and other execution graphs need separate analysis.",
+      "visual": "Reveal optimistic ceiling only after cost; retain omitted-cost list and scope.",
+      "chapter": "What this establishes",
+      "frames": 427
+    }
+  ],
+  "fps": 30,
+  "duration": 58.733333333333334
+}

@@ -1,0 +1,1375 @@
+{
+  "method": "Independent automatic speech recognition; no listening claim; no text prompt supplied. FFmpeg decodes WAV to mono float32 at 16 kHz for Whisper input.",
+  "model": "Systran/faster-whisper-small.en",
+  "model_source": "https://huggingface.co/Systran/faster-whisper-small.en",
+  "options": {
+    "device": "cpu",
+    "compute_type": "int8",
+    "cpu_threads": 6,
+    "beam_size": 5,
+    "language": "en",
+    "temperature": 0,
+    "condition_on_previous_text": false,
+    "word_timestamps": true,
+    "vad_filter": false,
+    "initial_prompt": null
+  },
+  "limitations": "ASR transcription is fallible and does not establish prosody, naturalness, or exact pronunciation. Text differences require interpretation, not automatic failure.",
+  "clips": [
+    {
+      "repo": "household-compute",
+      "id": "beat-1",
+      "sha256_before": "b5cfd6b5f12e9a756c1d99da5e7ea50f9032fba54b3c2f2915de05e8c8df05c3",
+      "manifest_sha256": "945fe226802cb7a9fee6133f46b43e7139b478db42fe82305df7123bb1ec7aeb",
+      "canonical_text": "Pooling memory can make a larger model seem possible. Here, ideal four-bit weights take about thirty-three gibibytes. Add our assumed overhead, cache, and workspace, and the total rises to about forty-four.",
+      "tts_text": "Pooling memory can make a larger model seem possible. Here, ideal four-bit weights take about thirty-three gibby bytes. Add our assumed overhead, cache, and workspace, and the total rises to about forty-four.",
+      "has_tts_override": true,
+      "cache_metadata": {
+        "cache_key": "a74da9194afd2288f8501977d260ab67bb4bc7fdb7f575fa460b119d62d63839",
+        "audio_sha256": "b5cfd6b5f12e9a756c1d99da5e7ea50f9032fba54b3c2f2915de05e8c8df05c3",
+        "parameters": {
+          "tts_text": "Pooling memory can make a larger model seem possible. Here, ideal four-bit weights take about thirty-three gibby bytes. Add our assumed overhead, cache, and workspace, and the total rises to about forty-four.",
+          "voice": "am_michael",
+          "language": "en-us",
+          "speed": 0.95,
+          "lead_in": 0.12,
+          "tail_out": 0.5
+        },
+        "engine": {
+          "model_sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5",
+          "voices_sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+          "kokoro_onnx_version": "0.6.1",
+          "cache_version": 1
+        }
+      },
+      "audio_info": {
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "frames": 382496,
+        "duration_seconds": 15.937333333333333
+      },
+      "transcription": "Pooling memory can make a larger model seem possible. Here, ideal 4-bit weights take about 33 GB. Add our assumed overhead, cache, and workspace, and the total rises to about 44.",
+      "segments": [
+        {
+          "id": 1,
+          "seek": 0,
+          "start": 0.0,
+          "end": 3.3,
+          "text": " Pooling memory can make a larger model seem possible.",
+          "tokens": [
+            50363,
+            19850,
+            278,
+            4088,
+            460,
+            787,
+            257,
+            4025,
+            2746,
+            1283,
+            1744,
+            13,
+            50553
+          ],
+          "avg_logprob": -0.2611410648872455,
+          "compression_ratio": 1.289855072463768,
+          "no_speech_prob": 0.00044284408795647323,
+          "words": [
+            {
+              "start": 0.0,
+              "end": 0.58,
+              "word": " Pooling",
+              "probability": 0.8773616552352905
+            },
+            {
+              "start": 0.58,
+              "end": 0.84,
+              "word": " memory",
+              "probability": 0.9869128465652466
+            },
+            {
+              "start": 0.84,
+              "end": 1.12,
+              "word": " can",
+              "probability": 0.9975065588951111
+            },
+            {
+              "start": 1.12,
+              "end": 1.3,
+              "word": " make",
+              "probability": 0.999206006526947
+            },
+            {
+              "start": 1.3,
+              "end": 1.48,
+              "word": " a",
+              "probability": 0.9979667663574219
+            },
+            {
+              "start": 1.48,
+              "end": 1.82,
+              "word": " larger",
+              "probability": 0.9985224604606628
+            },
+            {
+              "start": 1.82,
+              "end": 2.3,
+              "word": " model",
+              "probability": 0.997892439365387
+            },
+            {
+              "start": 2.3,
+              "end": 2.62,
+              "word": " seem",
+              "probability": 0.9901126623153687
+            },
+            {
+              "start": 2.62,
+              "end": 3.3,
+              "word": " possible.",
+              "probability": 0.9978942275047302
+            }
+          ],
+          "temperature": 0
+        },
+        {
+          "id": 2,
+          "seek": 0,
+          "start": 4.1,
+          "end": 8.1,
+          "text": " Here, ideal 4-bit weights take about 33 GB.",
+          "tokens": [
+            50553,
+            3423,
+            11,
+            7306,
+            604,
+            12,
+            2545,
+            19590,
+            1011,
+            546,
+            4747,
+            13124,
+            13,
+            50813
+          ],
+          "avg_logprob": -0.2611410648872455,
+          "compression_ratio": 1.289855072463768,
+          "no_speech_prob": 0.00044284408795647323,
+          "words": [
+            {
+              "start": 4.1,
+              "end": 4.28,
+              "word": " Here,",
+              "probability": 0.9961375594139099
+            },
+            {
+              "start": 5.3,
+              "end": 5.3,
+              "word": " ideal",
+              "probability": 0.9836783409118652
+            },
+            {
+              "start": 5.3,
+              "end": 5.72,
+              "word": " 4",
+              "probability": 0.7608831524848938
+            },
+            {
+              "start": 5.72,
+              "end": 5.92,
+              "word": "-bit",
+              "probability": 0.9632693827152252
+            },
+            {
+              "start": 5.92,
+              "end": 6.26,
+              "word": " weights",
+              "probability": 0.9768298268318176
+            },
+            {
+              "start": 6.26,
+              "end": 6.5,
+              "word": " take",
+              "probability": 0.9937897324562073
+            },
+            {
+              "start": 6.5,
+              "end": 6.8,
+              "word": " about",
+              "probability": 0.9971318244934082
+            },
+            {
+              "start": 6.8,
+              "end": 7.7,
+              "word": " 33",
+              "probability": 0.9848750233650208
+            },
+            {
+              "start": 7.7,
+              "end": 8.1,
+              "word": " GB.",
+              "probability": 0.19639289379119873
+            }
+          ],
+          "temperature": 0
+        },
+        {
+          "id": 3,
+          "seek": 0,
+          "start": 9.0,
+          "end": 14.8,
+          "text": " Add our assumed overhead, cache, and workspace, and the total rises to about 44.",
+          "tokens": [
+            50813,
+            3060,
+            674,
+            9672,
+            16965,
+            11,
+            12940,
+            11,
+            290,
+            44573,
+            11,
+            290,
+            262,
+            2472,
+            16736,
+            284,
+            546,
+            5846,
+            13,
+            51153
+          ],
+          "avg_logprob": -0.2611410648872455,
+          "compression_ratio": 1.289855072463768,
+          "no_speech_prob": 0.00044284408795647323,
+          "words": [
+            {
+              "start": 9.0,
+              "end": 9.36,
+              "word": " Add",
+              "probability": 0.9906042218208313
+            },
+            {
+              "start": 9.36,
+              "end": 9.52,
+              "word": " our",
+              "probability": 0.9966541528701782
+            },
+            {
+              "start": 9.52,
+              "end": 9.94,
+              "word": " assumed",
+              "probability": 0.9963108897209167
+            },
+            {
+              "start": 9.94,
+              "end": 10.58,
+              "word": " overhead,",
+              "probability": 0.9512665271759033
+            },
+            {
+              "start": 10.96,
+              "end": 11.26,
+              "word": " cache,",
+              "probability": 0.978354275226593
+            },
+            {
+              "start": 11.54,
+              "end": 11.62,
+              "word": " and",
+              "probability": 0.9962888956069946
+            },
+            {
+              "start": 11.62,
+              "end": 12.06,
+              "word": " workspace,",
+              "probability": 0.9541736245155334
+            },
+            {
+              "start": 12.58,
+              "end": 12.74,
+              "word": " and",
+              "probability": 0.997533917427063
+            },
+            {
+              "start": 12.74,
+              "end": 12.86,
+              "word": " the",
+              "probability": 0.998156726360321
+            },
+            {
+              "start": 12.86,
+              "end": 13.16,
+              "word": " total",
+              "probability": 0.9988756775856018
+            },
+            {
+              "start": 13.16,
+              "end": 13.68,
+              "word": " rises",
+              "probability": 0.9951242804527283
+            },
+            {
+              "start": 13.68,
+              "end": 14.0,
+              "word": " to",
+              "probability": 0.9976740479469299
+            },
+            {
+              "start": 14.0,
+              "end": 14.28,
+              "word": " about",
+              "probability": 0.9938972592353821
+            },
+            {
+              "start": 14.28,
+              "end": 14.8,
+              "word": " 44.",
+              "probability": 0.9949780106544495
+            }
+          ],
+          "temperature": 0
+        }
+      ],
+      "differences_vs_canonical": [
+        {
+          "operation": "replace",
+          "expected": "four",
+          "recognized": "4"
+        },
+        {
+          "operation": "replace",
+          "expected": "thirty three gibibytes",
+          "recognized": "33 gb"
+        },
+        {
+          "operation": "replace",
+          "expected": "forty four",
+          "recognized": "44"
+        }
+      ],
+      "differences_vs_tts": [
+        {
+          "operation": "replace",
+          "expected": "four",
+          "recognized": "4"
+        },
+        {
+          "operation": "replace",
+          "expected": "thirty three gibby bytes",
+          "recognized": "33 gb"
+        },
+        {
+          "operation": "replace",
+          "expected": "forty four",
+          "recognized": "44"
+        }
+      ],
+      "sha256_after": "b5cfd6b5f12e9a756c1d99da5e7ea50f9032fba54b3c2f2915de05e8c8df05c3",
+      "wav_unchanged_during_asr": true,
+      "asr_elapsed_seconds": 2.9184085399997457,
+      "sha256_final_recheck": "b5cfd6b5f12e9a756c1d99da5e7ea50f9032fba54b3c2f2915de05e8c8df05c3",
+      "cache_hash_matches": true,
+      "cache_tts_text_matches": true
+    },
+    {
+      "repo": "household-compute",
+      "id": "beat-2",
+      "sha256_before": "ed6cfd4337561f0659ffa5c67383f8072b46a55b5d579a6178fd3b2fa3f7466e",
+      "manifest_sha256": "945fe226802cb7a9fee6133f46b43e7139b478db42fe82305df7123bb1ec7aeb",
+      "canonical_text": "At twelve usable gibibytes per pool, that means at least four pools in aggregate. But adding their capacities doesn't prove the model can actually be placed across them.",
+      "tts_text": "At twelve usable gibby bytes per pool, that means at least four pools in aggregate. But adding their capacities doesn't prove the model can actually be placed across them.",
+      "has_tts_override": true,
+      "cache_metadata": {
+        "cache_key": "e742c008517d66019fb8c85ff75a7ebb335fcce511de032a47b83194bd3ebf70",
+        "audio_sha256": "ed6cfd4337561f0659ffa5c67383f8072b46a55b5d579a6178fd3b2fa3f7466e",
+        "parameters": {
+          "tts_text": "At twelve usable gibby bytes per pool, that means at least four pools in aggregate. But adding their capacities doesn't prove the model can actually be placed across them.",
+          "voice": "am_michael",
+          "language": "en-us",
+          "speed": 0.95,
+          "lead_in": 0.12,
+          "tail_out": 0.5
+        },
+        "engine": {
+          "model_sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5",
+          "voices_sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+          "kokoro_onnx_version": "0.6.1",
+          "cache_version": 1
+        }
+      },
+      "audio_info": {
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "frames": 286240,
+        "duration_seconds": 11.926666666666666
+      },
+      "transcription": "At 12 usable Gibby bytes per pool, that means at least four pools in aggregate. But adding their capacities doesn't prove the model can actually be placed across them.",
+      "segments": [
+        {
+          "id": 1,
+          "seek": 0,
+          "start": 0.0,
+          "end": 5.76,
+          "text": " At 12 usable Gibby bytes per pool, that means at least four pools in aggregate.",
+          "tokens": [
+            50363,
+            1629,
+            1105,
+            24284,
+            12488,
+            1525,
+            9881,
+            583,
+            5933,
+            11,
+            326,
+            1724,
+            379,
+            1551,
+            1440,
+            20354,
+            287,
+            19406,
+            13,
+            50663
+          ],
+          "avg_logprob": -0.21723126830198827,
+          "compression_ratio": 1.2748091603053435,
+          "no_speech_prob": 0.0008470838074572384,
+          "words": [
+            {
+              "start": 0.0,
+              "end": 0.4,
+              "word": " At",
+              "probability": 0.933669924736023
+            },
+            {
+              "start": 0.4,
+              "end": 0.8,
+              "word": " 12",
+              "probability": 0.9233006238937378
+            },
+            {
+              "start": 0.8,
+              "end": 1.34,
+              "word": " usable",
+              "probability": 0.9499537348747253
+            },
+            {
+              "start": 1.34,
+              "end": 1.74,
+              "word": " Gibby",
+              "probability": 0.5029029697179794
+            },
+            {
+              "start": 1.74,
+              "end": 1.98,
+              "word": " bytes",
+              "probability": 0.7297754287719727
+            },
+            {
+              "start": 1.98,
+              "end": 2.28,
+              "word": " per",
+              "probability": 0.9960468411445618
+            },
+            {
+              "start": 2.28,
+              "end": 2.64,
+              "word": " pool,",
+              "probability": 0.98084557056427
+            },
+            {
+              "start": 3.24,
+              "end": 3.34,
+              "word": " that",
+              "probability": 0.9956173896789551
+            },
+            {
+              "start": 3.34,
+              "end": 3.6,
+              "word": " means",
+              "probability": 0.9980936646461487
+            },
+            {
+              "start": 3.6,
+              "end": 3.84,
+              "word": " at",
+              "probability": 0.9918352365493774
+            },
+            {
+              "start": 3.84,
+              "end": 4.06,
+              "word": " least",
+              "probability": 0.9974256157875061
+            },
+            {
+              "start": 4.06,
+              "end": 4.46,
+              "word": " four",
+              "probability": 0.5772595405578613
+            },
+            {
+              "start": 4.46,
+              "end": 4.92,
+              "word": " pools",
+              "probability": 0.9942148327827454
+            },
+            {
+              "start": 4.92,
+              "end": 5.18,
+              "word": " in",
+              "probability": 0.990815281867981
+            },
+            {
+              "start": 5.18,
+              "end": 5.76,
+              "word": " aggregate.",
+              "probability": 0.9446669220924377
+            }
+          ],
+          "temperature": 0
+        },
+        {
+          "id": 2,
+          "seek": 0,
+          "start": 6.54,
+          "end": 11.28,
+          "text": " But adding their capacities doesn't prove the model can actually be placed across them.",
+          "tokens": [
+            50663,
+            887,
+            4375,
+            511,
+            32484,
+            1595,
+            470,
+            5879,
+            262,
+            2746,
+            460,
+            1682,
+            307,
+            4624,
+            1973,
+            606,
+            13,
+            50963
+          ],
+          "avg_logprob": -0.21723126830198827,
+          "compression_ratio": 1.2748091603053435,
+          "no_speech_prob": 0.0008470838074572384,
+          "words": [
+            {
+              "start": 6.54,
+              "end": 6.62,
+              "word": " But",
+              "probability": 0.9944800138473511
+            },
+            {
+              "start": 6.62,
+              "end": 6.98,
+              "word": " adding",
+              "probability": 0.9841569066047668
+            },
+            {
+              "start": 6.98,
+              "end": 7.2,
+              "word": " their",
+              "probability": 0.996579110622406
+            },
+            {
+              "start": 7.2,
+              "end": 7.84,
+              "word": " capacities",
+              "probability": 0.983833372592926
+            },
+            {
+              "start": 7.84,
+              "end": 8.4,
+              "word": " doesn't",
+              "probability": 0.9896054565906525
+            },
+            {
+              "start": 8.4,
+              "end": 8.66,
+              "word": " prove",
+              "probability": 0.9963282942771912
+            },
+            {
+              "start": 8.66,
+              "end": 8.88,
+              "word": " the",
+              "probability": 0.9936564564704895
+            },
+            {
+              "start": 8.88,
+              "end": 9.22,
+              "word": " model",
+              "probability": 0.9978075623512268
+            },
+            {
+              "start": 9.22,
+              "end": 9.48,
+              "word": " can",
+              "probability": 0.9980399012565613
+            },
+            {
+              "start": 9.48,
+              "end": 9.98,
+              "word": " actually",
+              "probability": 0.9946976900100708
+            },
+            {
+              "start": 9.98,
+              "end": 10.2,
+              "word": " be",
+              "probability": 0.9982594847679138
+            },
+            {
+              "start": 10.2,
+              "end": 10.48,
+              "word": " placed",
+              "probability": 0.9976951479911804
+            },
+            {
+              "start": 10.48,
+              "end": 10.9,
+              "word": " across",
+              "probability": 0.9987275004386902
+            },
+            {
+              "start": 10.9,
+              "end": 11.28,
+              "word": " them.",
+              "probability": 0.99892657995224
+            }
+          ],
+          "temperature": 0
+        }
+      ],
+      "differences_vs_canonical": [
+        {
+          "operation": "replace",
+          "expected": "twelve",
+          "recognized": "12"
+        },
+        {
+          "operation": "replace",
+          "expected": "gibibytes",
+          "recognized": "gibby bytes"
+        }
+      ],
+      "differences_vs_tts": [
+        {
+          "operation": "replace",
+          "expected": "twelve",
+          "recognized": "12"
+        }
+      ],
+      "sha256_after": "ed6cfd4337561f0659ffa5c67383f8072b46a55b5d579a6178fd3b2fa3f7466e",
+      "wav_unchanged_during_asr": true,
+      "asr_elapsed_seconds": 2.920924085000024,
+      "sha256_final_recheck": "ed6cfd4337561f0659ffa5c67383f8072b46a55b5d579a6178fd3b2fa3f7466e",
+      "cache_hash_matches": true,
+      "cache_tts_text_matches": true
+    },
+    {
+      "repo": "household-compute",
+      "id": "beat-3",
+      "sha256_before": "d880d49153f86b59f2f25bc5f2c4334ebe90ac2d3cd51c1572ab806ca65c8947",
+      "manifest_sha256": "945fe226802cb7a9fee6133f46b43e7139b478db42fe82305df7123bb1ec7aeb",
+      "canonical_text": "Speed needs a separate calculation. In this one-token serial example, every stage depends on the previous one. With the stated link assumptions, sixteen stages spend about four tenths of a second on communication alone.",
+      "tts_text": "Speed needs a separate calculation. In this one-token serial example, every stage depends on the previous one. With the stated link assumptions, sixteen stages spend about four tenths of a second on communication alone.",
+      "has_tts_override": false,
+      "cache_metadata": {
+        "cache_key": "ace9093e1fed33b9dad3728fa10ed6be2d4b141f5999e397cd2aa2c1f2718119",
+        "audio_sha256": "d880d49153f86b59f2f25bc5f2c4334ebe90ac2d3cd51c1572ab806ca65c8947",
+        "parameters": {
+          "tts_text": "Speed needs a separate calculation. In this one-token serial example, every stage depends on the previous one. With the stated link assumptions, sixteen stages spend about four tenths of a second on communication alone.",
+          "voice": "am_michael",
+          "language": "en-us",
+          "speed": 0.95,
+          "lead_in": 0.12,
+          "tail_out": 0.5
+        },
+        "engine": {
+          "model_sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5",
+          "voices_sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+          "kokoro_onnx_version": "0.6.1",
+          "cache_version": 1
+        }
+      },
+      "audio_info": {
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "frames": 398368,
+        "duration_seconds": 16.598666666666666
+      },
+      "transcription": "Speed needs a separate calculation. In this one token serial example, every stage depends on the previous one. With the stated link assumptions, 16 stages spend about 4 tenths of a second on communication alone.",
+      "segments": [
+        {
+          "id": 1,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.3,
+          "text": " Speed needs a separate calculation.",
+          "tokens": [
+            50363,
+            8729,
+            2476,
+            257,
+            4553,
+            17952,
+            13,
+            50503
+          ],
+          "avg_logprob": -0.2644404379221109,
+          "compression_ratio": 1.3790849673202614,
+          "no_speech_prob": 0.0009228783892467618,
+          "words": [
+            {
+              "start": 0.0,
+              "end": 0.54,
+              "word": " Speed",
+              "probability": 0.934573233127594
+            },
+            {
+              "start": 0.54,
+              "end": 0.92,
+              "word": " needs",
+              "probability": 0.9952458739280701
+            },
+            {
+              "start": 0.92,
+              "end": 1.18,
+              "word": " a",
+              "probability": 0.9969624876976013
+            },
+            {
+              "start": 1.18,
+              "end": 1.48,
+              "word": " separate",
+              "probability": 0.9953338503837585
+            },
+            {
+              "start": 1.48,
+              "end": 2.3,
+              "word": " calculation.",
+              "probability": 0.9984733462333679
+            }
+          ],
+          "temperature": 0
+        },
+        {
+          "id": 2,
+          "seek": 0,
+          "start": 3.08,
+          "end": 5.18,
+          "text": " In this one token serial example,",
+          "tokens": [
+            50503,
+            554,
+            428,
+            530,
+            11241,
+            11389,
+            1672,
+            11,
+            50638
+          ],
+          "avg_logprob": -0.2644404379221109,
+          "compression_ratio": 1.3790849673202614,
+          "no_speech_prob": 0.0009228783892467618,
+          "words": [
+            {
+              "start": 3.08,
+              "end": 3.12,
+              "word": " In",
+              "probability": 0.9924537539482117
+            },
+            {
+              "start": 3.12,
+              "end": 3.38,
+              "word": " this",
+              "probability": 0.9968331456184387
+            },
+            {
+              "start": 3.38,
+              "end": 3.66,
+              "word": " one",
+              "probability": 0.9762213826179504
+            },
+            {
+              "start": 3.66,
+              "end": 4.04,
+              "word": " token",
+              "probability": 0.626630961894989
+            },
+            {
+              "start": 4.04,
+              "end": 4.54,
+              "word": " serial",
+              "probability": 0.8968104720115662
+            },
+            {
+              "start": 4.54,
+              "end": 5.18,
+              "word": " example,",
+              "probability": 0.9966377019882202
+            }
+          ],
+          "temperature": 0
+        },
+        {
+          "id": 3,
+          "seek": 0,
+          "start": 5.66,
+          "end": 8.12,
+          "text": " every stage depends on the previous one.",
+          "tokens": [
+            50638,
+            790,
+            3800,
+            8338,
+            319,
+            262,
+            2180,
+            530,
+            13,
+            50793
+          ],
+          "avg_logprob": -0.2644404379221109,
+          "compression_ratio": 1.3790849673202614,
+          "no_speech_prob": 0.0009228783892467618,
+          "words": [
+            {
+              "start": 5.66,
+              "end": 5.96,
+              "word": " every",
+              "probability": 0.9971580505371094
+            },
+            {
+              "start": 5.96,
+              "end": 6.42,
+              "word": " stage",
+              "probability": 0.9913781881332397
+            },
+            {
+              "start": 6.42,
+              "end": 6.94,
+              "word": " depends",
+              "probability": 0.9977771639823914
+            },
+            {
+              "start": 6.94,
+              "end": 7.24,
+              "word": " on",
+              "probability": 0.9978970289230347
+            },
+            {
+              "start": 7.24,
+              "end": 7.38,
+              "word": " the",
+              "probability": 0.9979177117347717
+            },
+            {
+              "start": 7.38,
+              "end": 7.72,
+              "word": " previous",
+              "probability": 0.9992139339447021
+            },
+            {
+              "start": 7.72,
+              "end": 8.12,
+              "word": " one.",
+              "probability": 0.9972781538963318
+            }
+          ],
+          "temperature": 0
+        },
+        {
+          "id": 4,
+          "seek": 0,
+          "start": 8.74,
+          "end": 10.38,
+          "text": " With the stated link assumptions,",
+          "tokens": [
+            50793,
+            2080,
+            262,
+            5081,
+            2792,
+            14895,
+            11,
+            50903
+          ],
+          "avg_logprob": -0.2644404379221109,
+          "compression_ratio": 1.3790849673202614,
+          "no_speech_prob": 0.0009228783892467618,
+          "words": [
+            {
+              "start": 8.74,
+              "end": 8.92,
+              "word": " With",
+              "probability": 0.9947618842124939
+            },
+            {
+              "start": 8.92,
+              "end": 9.1,
+              "word": " the",
+              "probability": 0.9884564876556396
+            },
+            {
+              "start": 9.1,
+              "end": 9.44,
+              "word": " stated",
+              "probability": 0.9521603584289551
+            },
+            {
+              "start": 9.44,
+              "end": 9.74,
+              "word": " link",
+              "probability": 0.9161260724067688
+            },
+            {
+              "start": 9.74,
+              "end": 10.38,
+              "word": " assumptions,",
+              "probability": 0.9958089590072632
+            }
+          ],
+          "temperature": 0
+        },
+        {
+          "id": 5,
+          "seek": 0,
+          "start": 11.1,
+          "end": 15.78,
+          "text": " 16 stages spend about 4 tenths of a second on communication alone.",
+          "tokens": [
+            50903,
+            1467,
+            9539,
+            4341,
+            546,
+            604,
+            24395,
+            82,
+            286,
+            257,
+            1218,
+            319,
+            6946,
+            3436,
+            13,
+            51183
+          ],
+          "avg_logprob": -0.2644404379221109,
+          "compression_ratio": 1.3790849673202614,
+          "no_speech_prob": 0.0009228783892467618,
+          "words": [
+            {
+              "start": 11.1,
+              "end": 11.42,
+              "word": " 16",
+              "probability": 0.7143410444259644
+            },
+            {
+              "start": 11.42,
+              "end": 12.14,
+              "word": " stages",
+              "probability": 0.9869175553321838
+            },
+            {
+              "start": 12.14,
+              "end": 12.5,
+              "word": " spend",
+              "probability": 0.6368100643157959
+            },
+            {
+              "start": 12.5,
+              "end": 12.8,
+              "word": " about",
+              "probability": 0.9969424605369568
+            },
+            {
+              "start": 12.8,
+              "end": 13.32,
+              "word": " 4",
+              "probability": 0.34280842542648315
+            },
+            {
+              "start": 13.32,
+              "end": 13.86,
+              "word": " tenths",
+              "probability": 0.6101035997271538
+            },
+            {
+              "start": 13.86,
+              "end": 13.86,
+              "word": " of",
+              "probability": 0.9837161302566528
+            },
+            {
+              "start": 13.86,
+              "end": 13.98,
+              "word": " a",
+              "probability": 0.9819928407669067
+            },
+            {
+              "start": 13.98,
+              "end": 14.3,
+              "word": " second",
+              "probability": 0.997126042842865
+            },
+            {
+              "start": 14.3,
+              "end": 14.6,
+              "word": " on",
+              "probability": 0.9946316480636597
+            },
+            {
+              "start": 14.6,
+              "end": 15.18,
+              "word": " communication",
+              "probability": 0.9907624125480652
+            },
+            {
+              "start": 15.18,
+              "end": 15.78,
+              "word": " alone.",
+              "probability": 0.9964746832847595
+            }
+          ],
+          "temperature": 0
+        }
+      ],
+      "differences_vs_canonical": [
+        {
+          "operation": "replace",
+          "expected": "sixteen",
+          "recognized": "16"
+        },
+        {
+          "operation": "replace",
+          "expected": "four",
+          "recognized": "4"
+        }
+      ],
+      "differences_vs_tts": [
+        {
+          "operation": "replace",
+          "expected": "sixteen",
+          "recognized": "16"
+        },
+        {
+          "operation": "replace",
+          "expected": "four",
+          "recognized": "4"
+        }
+      ],
+      "sha256_after": "d880d49153f86b59f2f25bc5f2c4334ebe90ac2d3cd51c1572ab806ca65c8947",
+      "wav_unchanged_during_asr": true,
+      "asr_elapsed_seconds": 3.49041027200019,
+      "sha256_final_recheck": "d880d49153f86b59f2f25bc5f2c4334ebe90ac2d3cd51c1572ab806ca65c8947",
+      "cache_hash_matches": true,
+      "cache_tts_text_matches": true
+    },
+    {
+      "repo": "household-compute",
+      "id": "beat-4",
+      "sha256_before": "2f4eb541dfab26574a190d40c9f68af42136da7c30e9f23e67360f75f7c86de5",
+      "manifest_sha256": "945fe226802cb7a9fee6133f46b43e7139b478db42fe82305df7123bb1ec7aeb",
+      "canonical_text": "That gives an optimistic communication-only ceiling of about two and a half tokens per second. These are assumptions, not household measurements, and other execution graphs need separate analysis.",
+      "tts_text": "That gives an optimistic communication-only ceiling of about two and a half tokens per second. These are assumptions, not household measurements, and other execution graphs need separate analysis.",
+      "has_tts_override": false,
+      "cache_metadata": {
+        "cache_key": "09a5494368f6aaef59d9dc97d3fd9a5150a7d8d4962a109f52ed22c59ae347a8",
+        "audio_sha256": "2f4eb541dfab26574a190d40c9f68af42136da7c30e9f23e67360f75f7c86de5",
+        "parameters": {
+          "tts_text": "That gives an optimistic communication-only ceiling of about two and a half tokens per second. These are assumptions, not household measurements, and other execution graphs need separate analysis.",
+          "voice": "am_michael",
+          "language": "en-us",
+          "speed": 0.95,
+          "lead_in": 0.12,
+          "tail_out": 0.5
+        },
+        "engine": {
+          "model_sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5",
+          "voices_sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+          "kokoro_onnx_version": "0.6.1",
+          "cache_version": 1
+        }
+      },
+      "audio_info": {
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "frames": 341536,
+        "duration_seconds": 14.230666666666666
+      },
+      "transcription": "That gives an optimistic communication-only ceiling of about two and a half tokens per second. These are assumptions, not household measurements, and other execution graphs need separate analysis.",
+      "segments": [
+        {
+          "id": 1,
+          "seek": 0,
+          "start": 0.0,
+          "end": 5.9,
+          "text": " That gives an optimistic communication-only ceiling of about two and a half tokens per second.",
+          "tokens": [
+            50363,
+            1320,
+            3607,
+            281,
+            16915,
+            6946,
+            12,
+            8807,
+            13387,
+            286,
+            546,
+            734,
+            290,
+            257,
+            2063,
+            16326,
+            583,
+            1218,
+            13,
+            50663
+          ],
+          "avg_logprob": -0.20473254720369974,
+          "compression_ratio": 1.380281690140845,
+          "no_speech_prob": 0.0020197511184960604,
+          "words": [
+            {
+              "start": 0.0,
+              "end": 0.4,
+              "word": " That",
+              "probability": 0.8381327390670776
+            },
+            {
+              "start": 0.4,
+              "end": 0.62,
+              "word": " gives",
+              "probability": 0.9950658082962036
+            },
+            {
+              "start": 0.62,
+              "end": 0.82,
+              "word": " an",
+              "probability": 0.9953091740608215
+            },
+            {
+              "start": 0.82,
+              "end": 1.44,
+              "word": " optimistic",
+              "probability": 0.9810441136360168
+            },
+            {
+              "start": 1.44,
+              "end": 2.08,
+              "word": " communication",
+              "probability": 0.8615961670875549
+            },
+            {
+              "start": 2.08,
+              "end": 2.82,
+              "word": "-only",
+              "probability": 0.7945030033588409
+            },
+            {
+              "start": 2.82,
+              "end": 3.36,
+              "word": " ceiling",
+              "probability": 0.9772939085960388
+            },
+            {
+              "start": 3.36,
+              "end": 3.64,
+              "word": " of",
+              "probability": 0.9915981292724609
+            },
+            {
+              "start": 3.64,
+              "end": 3.92,
+              "word": " about",
+              "probability": 0.9921187162399292
+            },
+            {
+              "start": 3.92,
+              "end": 4.32,
+              "word": " two",
+              "probability": 0.5126405954360962
+            },
+            {
+              "start": 4.32,
+              "end": 4.44,
+              "word": " and",
+              "probability": 0.7423528432846069
+            },
+            {
+              "start": 4.44,
+              "end": 4.54,
+              "word": " a",
+              "probability": 0.929981529712677
+            },
+            {
+              "start": 4.54,
+              "end": 4.74,
+              "word": " half",
+              "probability": 0.9979870319366455
+            },
+            {
+              "start": 4.74,
+              "end": 5.18,
+              "word": " tokens",
+              "probability": 0.9969889521598816
+            },
+            {
+              "start": 5.18,
+              "end": 5.46,
+              "word": " per",
+              "probability": 0.9913115501403809
+            },
+            {
+              "start": 5.46,
+              "end": 5.9,
+              "word": " second.",
+              "probability": 0.9968919157981873
+            }
+          ],
+          "temperature": 0
+        },
+        {
+          "id": 2,
+          "seek": 0,
+          "start": 6.66,
+          "end": 13.34,
+          "text": " These are assumptions, not household measurements, and other execution graphs need separate analysis.",
+          "tokens": [
+            50663,
+            2312,
+            389,
+            14895,
+            11,
+            407,
+            6641,
+            13871,
+            11,
+            290,
+            584,
+            9706,
+            28770,
+            761,
+            4553,
+            3781,
+            13,
+            51063
+          ],
+          "avg_logprob": -0.20473254720369974,
+          "compression_ratio": 1.380281690140845,
+          "no_speech_prob": 0.0020197511184960604,
+          "words": [
+            {
+              "start": 6.66,
+              "end": 7.02,
+              "word": " These",
+              "probability": 0.9961611032485962
+            },
+            {
+              "start": 7.02,
+              "end": 7.26,
+              "word": " are",
+              "probability": 0.9988024234771729
+            },
+            {
+              "start": 7.26,
+              "end": 7.84,
+              "word": " assumptions,",
+              "probability": 0.9937113523483276
+            },
+            {
+              "start": 8.54,
+              "end": 8.76,
+              "word": " not",
+              "probability": 0.9983454942703247
+            },
+            {
+              "start": 8.76,
+              "end": 9.36,
+              "word": " household",
+              "probability": 0.9950743317604065
+            },
+            {
+              "start": 9.36,
+              "end": 9.96,
+              "word": " measurements,",
+              "probability": 0.9939456582069397
+            },
+            {
+              "start": 10.38,
+              "end": 10.58,
+              "word": " and",
+              "probability": 0.9976621866226196
+            },
+            {
+              "start": 10.58,
+              "end": 10.86,
+              "word": " other",
+              "probability": 0.9981340765953064
+            },
+            {
+              "start": 10.86,
+              "end": 11.44,
+              "word": " execution",
+              "probability": 0.9940407872200012
+            },
+            {
+              "start": 11.44,
+              "end": 12.08,
+              "word": " graphs",
+              "probability": 0.9984340071678162
+            },
+            {
+              "start": 12.08,
+              "end": 12.38,
+              "word": " need",
+              "probability": 0.9773987531661987
+            },
+            {
+              "start": 12.38,
+              "end": 12.82,
+              "word": " separate",
+              "probability": 0.9928834438323975
+            },
+            {
+              "start": 12.82,
+              "end": 13.34,
+              "word": " analysis.",
+              "probability": 0.9923143982887268
+            }
+          ],
+          "temperature": 0
+        }
+      ],
+      "differences_vs_canonical": [],
+      "differences_vs_tts": [],
+      "sha256_after": "2f4eb541dfab26574a190d40c9f68af42136da7c30e9f23e67360f75f7c86de5",
+      "wav_unchanged_during_asr": true,
+      "asr_elapsed_seconds": 2.474422927999967,
+      "sha256_final_recheck": "2f4eb541dfab26574a190d40c9f68af42136da7c30e9f23e67360f75f7c86de5",
+      "cache_hash_matches": true,
+      "cache_tts_text_matches": true
+    }
+  ]
+}

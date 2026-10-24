@@ -1,0 +1,51 @@
+WEBVTT
+
+NOTE Sentence timings are approximate, not word-aligned.
+
+1
+00:00:00.120 --> 00:00:04.100
+Pooling memory can make a larger model seem possible.
+
+2
+00:00:04.100 --> 00:00:08.830
+Here, ideal four-bit weights take about thirty-three
+gibibytes.
+
+3
+00:00:08.830 --> 00:00:15.437
+Add our assumed overhead, cache, and workspace, and the
+total rises to about forty-four.
+
+4
+00:00:16.087 --> 00:00:21.538
+At twelve usable gibibytes per pool, that means at least
+four pools in aggregate.
+
+5
+00:00:21.538 --> 00:00:27.393
+But adding their capacities doesn't prove the model can
+actually be placed across them.
+
+6
+00:00:28.020 --> 00:00:30.597
+Speed needs a separate calculation.
+
+7
+00:00:30.597 --> 00:00:36.046
+In this one-token serial example, every stage depends on
+the previous one.
+
+8
+00:00:36.046 --> 00:00:43.999
+With the stated link assumptions, sixteen stages spend
+about four tenths of a second on communication alone.
+
+9
+00:00:44.653 --> 00:00:51.214
+That gives an optimistic communication-only ceiling of
+about two and a half tokens per second.
+
+10
+00:00:51.214 --> 00:00:58.264
+These are assumptions, not household measurements, and
+other execution graphs need separate analysis.

@@ -1,0 +1,21 @@
+{
+  "repo": "household-compute",
+  "sha256": "1264978482bcae764bf02faf6ab08cccac5733d342c6b7fa8280e87955368309",
+  "bytes": 1956903,
+  "duration": 58.766667,
+  "video_duration": "58.766667",
+  "audio_duration": "58.766667",
+  "width": 1280,
+  "height": 720,
+  "fps": "30/1",
+  "decode_returncode": 0,
+  "decode_errors": "",
+  "loudness_summary": "Integrated loudness:\n    I:         -16.4 LUFS\n    Threshold: -26.9 LUFS\n\n  Loudness range:\n    LRA:         1.8 LU\n    Threshold: -37.0 LUFS\n    LRA low:   -17.9 LUFS\n    LRA high:  -16.0 LUFS\n\n  True peak:\n    Peak:       -1.7 dBFS\n[out#0/null @ 0x55b606604400] video:0KiB audio:2756KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:58.79 bitrate=N/A speed= 366x",
+  "filename": "concept.mp4",
+  "visual_review": "Final contact sheet and meaning-carrying transitions inspected; no identified blocking overlap or clipping.",
+  "limitations": [
+    "No human or assistant listening claim.",
+    "Captions use approximate sentence timing, not word alignment.",
+    "No full research-project test rerun; scope is additive animation package."
+  ]
+}
